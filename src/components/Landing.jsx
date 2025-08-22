@@ -23,6 +23,9 @@ backgroundSize:"cover",}}>
          <button className="login-btn">LOGIN</button>
          <button className="signup-btn">SIGN UP</button>
         </nav>
+        </div>
+        </section>
+
         {/* Hero Section */}
       <section className="hero">
         <div className="hero-overlay">
@@ -40,9 +43,12 @@ backgroundSize:"cover",}}>
         <p>
           Explore your options and make informed decisions with our comprehensive guide to 
           universities around the world. Discover top-ranked institutions, explore diverse programs, 
-          and connect with like-minded individuals to build your academic future. With easy-to-use 
-        </div>
-    </section>
+          and connect with like-minded individuals to build your academic future. With easy-to-use  search tools, in-depth profiles, and trusted ratings and reviews, we provide everything 
+          you need to make the right choice for your academic journey. Start your search today and 
+          find your perfect fit!
+        </p>
+        <button className="get-started">GET STARTED</button>
+      </section>        
      </body>
     </>)
 }
