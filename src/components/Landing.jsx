@@ -14,16 +14,15 @@ let Landing =()=>{
             <li><a href="#">Community</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">About</a></li>
-            
+            <curveBg/>
          </ul>
-
          <div className="nav-buttons"></div>
          <button className="login-btn">LOGIN</button>
          <button className="signup-btn">SIGN UP</button>
         </nav>
         </div>
         {/* Hero Section */}
-      <section className="hero">
+      <div className="hero">
         <div className="hero-overlay">
           <h1>
             Find Your <span className="highlight">Future</span> Today!
@@ -32,7 +31,7 @@ let Landing =()=>{
             The Ultimate Guide to Universities Worldwide
           </p>
         </div>
-      </section>
+      </div>
 
       {/* Info Section */}
       <div className="info-section">
@@ -42,7 +41,6 @@ let Landing =()=>{
           and connect with like-minded individuals to build your academic future. With easy-to-use 
           </p>
         </div>
-        
     </section>
      
     </>)
