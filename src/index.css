@@ -1,7 +1,79 @@
-section{
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.section{
     border: 2px solid;
+    background-image: url(../src/assets/curveBg.jpg);
+    background-size:  100vw 30rem;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+.logo{
+  /* border: 2px solid blue; */
 }
 .navbar{
+  padding-left: 50px;
     display: flex;
-    border: 2px solid;
+    /* border: 2px solid red; */
+    height: 4rem;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+.nav-links{
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+}
+.nav-links>li>a{
+  text-decoration: none;
+  color: black;
+}
+.nav-buttons{
+  display: flex;
+  gap: 30px;
+ 
+}
+.nav-buttons>button{
+   background-color: rgb(219, 169, 45);
+   color: white;
+   border: none;
+   padding: 8px;
+}
+.hero{
+  background-image: url(../src/assets/clg.png);
+  height: 400px;
+  background-size: 100vw 400px;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}
+.hero-overlay{
+  /* border: 3px solid violet; */
+  width: 50rem;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+.highlight{
+  background-color: rgb(228, 182, 41);
+}
+.info-section{
+  /* border: 2px solid blue; */
+  width: 50vw;
+  font-size: 1.2rem;
+  padding: 20px;
+  margin: auto;
+}
+.get-start{
+  margin-left: 700px;
+  margin-top: 20px;
+  padding: 8px;
+  background-color: rgb(219, 169, 45);
+  color: white;
+  border: none;
 }
