@@ -15,10 +15,6 @@ let Landing =()=>{
             <li><a href="#">Community</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">About</a></li>
-<<<<<<< HEAD
-=======
-            
->>>>>>> ca44b00f522b210352392e0a5ca62b81c905308a
          </ul>
          <div className="nav-buttons">
          <button className="login-btn">LOGIN</button>
@@ -27,14 +23,7 @@ let Landing =()=>{
         </nav>
         </div>
         {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="body" style={{backgroundImage: `url(${Bgimage})`,
-backgroundRepeat: "no-repeat",
-backgroundPosition: "center bottom",
-backgroundSize:"cover",}} >
-=======
       <div className="hero">
->>>>>>> ca44b00f522b210352392e0a5ca62b81c905308a
         <div className="hero-overlay">
           <h1>
             Find Your <span className="highlight">Future</span> Today!
@@ -46,28 +35,15 @@ backgroundSize:"cover",}} >
       </div>
 
       {/* Info Section */}
-<<<<<<< HEAD
-      <section className="info-section">
-        <p >
-          Explore your options and make informed decisions with our comprehensive guide to 
-          universities around the world. Discover top-ranked institutions, explore diverse programs, 
-          and connect with like-minded individuals to build your academic future. With easy-to-use  search tools, in-depth profiles, and trusted ratings and reviews, we provide everything 
-          you need to make the right choice for your academic journey. Start your search today and 
-          find your perfect fit!
-        </p>
-        <button className="get-started">GET STARTED</button>
-      </section>        
-     </body>
-=======
       <div className="info-section">
         <p>
           Explore your options and make informed decisions with our comprehensive guide to universities around the world. Discover top-ranked institutions, explore diverse programs, and connect with like-minded individuals to build your academic future. With easy-to-use search tools, in-depth profiles, and trusted ratings and reviews, we provide everything you need to make the right choice for your academic journey. Start your search today and find your perfect fit!
           </p>
         </div>
           <button className="get-start">get Started</button>
+
     </section>
-     
->>>>>>> ca44b00f522b210352392e0a5ca62b81c905308a
+
     </>)
 }
 export default Landing
