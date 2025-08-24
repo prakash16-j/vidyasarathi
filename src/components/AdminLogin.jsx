@@ -1,8 +1,7 @@
 let AdminLogin=()=>{
     return(<>
     
-    <section>
-        <body>
+    
   <section className="mainheading">
     <div className="left-content">
       <h1>VIDYA SARTHI</h1>
@@ -15,7 +14,8 @@ let AdminLogin=()=>{
 
     <div className="login-box">
       <h3>Login</h3>
-      <hr style="width:50%;text-align:left;margin-left:0;margin-top:10px;" color="black" />
+      <hr class="w-1/2 text-left ml-0 mt-[10px] border-black" />
+
       <p>Welcome onboard with us!</p>
 
       <form>
@@ -33,9 +33,7 @@ let AdminLogin=()=>{
       </form>
     </div>
   </section>
-</body>
 
-    </section>
     </>)
 }
 export default AdminLogin

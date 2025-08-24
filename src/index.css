@@ -1,3 +1,4 @@
+@import "tailwindcss";
 *{
   padding: 0;
   margin: 0;
@@ -11,9 +12,7 @@
     height: 100vh;
     
 }
-.logo{
-  /* border: 2px solid blue; */
-}
+
 .navbar{
   padding-left: 50px;
     display: flex;
