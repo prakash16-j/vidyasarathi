@@ -5,17 +5,17 @@
   box-sizing: border-box;
 }
 .section{
-    /* border: 2px solid; */
+    border: 2px solid;
     background-image: url(../src/assets/curveBg.jpg);
     background-size:  100vw 30rem;
     background-repeat: no-repeat;
-    height: 100vh;
-    /* margin-top: 10px; */
+   
+    
     
 }
 
 .navbar{
-  padding-left: 40px;
+  padding-left: 50px;
     display: flex;
     /* border: 2px solid red; */
     height: 4rem;
@@ -27,7 +27,7 @@
   display: flex;
   gap: 30px;
   list-style-type: none;
-  }
+}
 .nav-links>li>a{
   text-decoration: none;
   color: black;
@@ -45,18 +45,14 @@
 }
 .hero{
   background-image: url(../src/assets/clg.png);
-  height: 600px;
-  background-size:100vw 600px;
+  height: 400px;
+  background-size: 100vw 400px;
   display: flex;
   align-items: center;
-  background-repeat: no-repeat;
   border-radius: 30px;
   margin-left:115px;
-  margin-right: 115px;
+  margin-right: 115px;  background-repeat: no-repeat;
   justify-content: center;
-  border-radius: 50px;
-  margin-left: 120px;
-  margin-right: 120px;
 }
 .hero-overlay{
   /* border: 3px solid violet; */
@@ -66,11 +62,11 @@
   text-align: center;
 }
 .highlight{
-background-color: rgb(228, 182, 41);
+  background-color: rgb(228, 182, 41);
 }
 .info-section{
   /* border: 2px solid blue; */
-  width: 50vw;
+  width: 58vw;
   font-size: 1.2rem;
   padding: 20px;
   margin: auto;
@@ -101,58 +97,37 @@ background-color: rgb(228, 182, 41);
 .mainheading {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
-      height: 100vh;
+      background-image: url('./assets/curveBg.jpg');
+       background-size:  100vw 30rem;
+    background-repeat: no-repeat;
+     
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 50px;
       color: white;
+      border: 2px solid red;
     }
 
+    .left-content {
+      max-width: 35%;
+      margin-left: 50px;
+      
+    }
 
-/* Card */
-.card1 {
-  background: #fff;
-  padding: 20px;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
+    .left-content h1 {
+      font-size: 50px;
+      margin: 0;
+    }
 
-.header1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
+    .left-content h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
 
-.header2{
-  font-weight: 700;
-}
-
-.header1 h2 {
-  font-size: 16px;
-  color: #333;
-}
-
-
-.radio-label1 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #444;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-  .admin-login{
-    border: 2px solid;
-    height: 100vh;
-    width: 100%;
-    background-image: url(../src/assets/curveBg.jpg);
-    background-size:  100vw 30rem;
-position: relative;
-    background-repeat: no-repeat;
+    .left-content p {
+      font-size: 16px;
+      line-height: 1.;
     }
     .img{
       height: 70vh;
@@ -160,8 +135,20 @@ position: relative;
       top: 20vh;
       left: 30vh;
     }
+    .admin-login{
+      background-image: url('../public/Books.png');
+      width: 80%;
+      height: 80vh;
+      position: relative;
+      display: flex;
+      justify-content: end;
+      padding-right: 5rem;
+      align-items: center;
+      border-radius: 10px;
+    }
+
     .login-box {
-      background: rgba(255, 255, 255, 0.5);
+      background: linear-gradient(to top,rgba(137, 129, 129, 0.5), rgba(239, 233, 233, 0.644));
       background-color: #A2A6A6;
       padding: 20px;
       border-radius: 10px;
@@ -169,6 +156,7 @@ position: relative;
       top: 22vh;
       left: 100vh;
       width: 300px;
+      width: 350px;
       color: black;
       border: 2px solid red;
     }
@@ -202,6 +190,24 @@ h3{
   margin-left: 30px;
   
 }
+      display: flex;
+      flex-direction: column;
+      
+     height: 70%;
+
+
+    }
+
+    .login-box h3 {
+      margin-top: 0px;
+      text-align: left;
+    }
+
+    .login-box p {
+      font-size: 14px;
+      text-align: left;
+      margin-top: 10px;
+    }
 
 select,
 input[type="text"] {
@@ -338,7 +344,5 @@ input[type="text"] {
         background-size: cover;
     }
     .new {
-      
-        background-color: #D8E7F5;
+        background-color: rgb(206, 228, 235);
     }
-
