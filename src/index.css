@@ -48,7 +48,9 @@
   background-size: 100vw 400px;
   display: flex;
   align-items: center;
-
+  border-radius: 30px;
+  margin-left:115px;
+  margin-right: 115px;
   justify-content: center;
 }
 .hero-overlay{
@@ -76,7 +78,6 @@
   color: white;
   border: none;
 }
-
 
 .mainheading {
       margin: 0;
