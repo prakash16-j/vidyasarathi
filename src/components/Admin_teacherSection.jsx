@@ -1,6 +1,13 @@
+
+import StudentTable from "./StudentTable"
+
 let Admin_teacherSection =()=>{
     return(
-       <section className="bg-red-200 h-100vh">
+<<<<<<< HEAD
+       <section>
+=======
+       <section className="">
+>>>>>>> 34341a3748fc675f7840dbc9d9eba4f5ff8bced5
         {/* start code from here */}
       <div className="container1">
       <div className="card1">
@@ -12,47 +19,69 @@ let Admin_teacherSection =()=>{
             Master List
           </label>
         </div>
+import React from 'react';
+// Importing icons from popular icon libraries via react-icons
+import { FaDollarSign, FaFolder, FaUserFriends, FaFileUpload } from 'react-icons/fa';
+import { IoLogOutOutline } from 'react-icons/io5';
 
-        <hr className="horizontal1" />
 
-        {/* Search by list */}
-         <div className="section1">
-          <h3>Search by List:</h3>
-          <div className="row1">
-            <select>
-              <option>Select Course</option>
-            </select>
-            <select>
-              <option>Select Batch</option>
-            </select>
-            <select>
-              <option>Select Branch</option>
-            </select>
-            <button className="btn1">Search</button>
+
+const ActionButton = ({ icon, text, notificationCount }) => {
+  return (
+    <button className="relative flex flex-col items-center justify-center p-6 bg-blue-100 hover:bg-blue-200 rounded-xl shadow-sm transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+      {/* Notification Badge: Only shows if notificationCount is a truthy value */}
+      {notificationCount && (
+        <span className="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 bg-red-500 text-white text-xs font-bold rounded-full">
+          {notificationCount}
+        </span>
+      )}
+      
+      {/* Icon Container */}
+      <div className="mb-4 bg-yellow-400 p-4 rounded-lg">
+        {icon}
+      </div>
+      
+      {/* Text Label */}
+      <span className="text-center font-semibold text-blue-900">{text}</span>
+    </button>
+  );
+};
+const Admin_teacherSection= () => {
+  return (
+    <div className="min-h-screen bg-gray-50 font-sans">
+
+      {/* Main Content Area */}
+      <main className="p-4 sm:p-8">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-200">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">Quick Actions:</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              <ActionButton
+                icon={<FaDollarSign size={28} className="text-white" />}
+                text="Add Faculty/ Remove Faculty"
+              />
+              <ActionButton
+                icon={<FaFolder size={28} className="text-white" />}
+                text="Add Student/ Remove Student"
+              />
+              <ActionButton
+                icon={<FaUserFriends size={28} className="text-white" />}
+                text="View Faculty & Student"
+                notificationCount={99}
+              />
+              <ActionButton
+                icon={<FaFileUpload size={28} className="text-white" />}
+                text="Add Regulations"
+              />
+            </div>
           </div>
         </div>
-
-         {/* Specific Search */}
-        <div className="section2">
-          <h3>Specific Search:</h3>
-          <div className="row2">
-            {/* <input type="text" placeholder="Enter Roll Number" /> */}
-            <label className="input-label">Enter Roll Number</label>
-            <input type="text" placeholder="Name (Auto)" />
-            <button className="btn2">Apply</button>
-          </div>
-        </div>
-
-        </div>
-        </div>
-      <div className="footer1">
-      <span className="text1">Export Result as excel file.</span>
-      <span className="last-updated">Last updated on: 19 August | 23:00</span>
-      <button className="export-btn">Export</button>
+      </main>
     </div>
-</section>
+    <div>
+      <StudentTable/>
+    </div>
+  );
+};
 
-    )
-
-}
-export default Admin_teacherSection
+export default Admin_teacherSection;
