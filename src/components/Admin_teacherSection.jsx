@@ -1,6 +1,8 @@
+import StudentTable from "./StudentTable"
+
 let Admin_teacherSection =()=>{
     return(
-       <section className="bg-red-200 h-100vh">
+       <section className="">
         {/* start code from here */}
       <div className="container1">
       <div className="card1">
@@ -49,6 +51,9 @@ let Admin_teacherSection =()=>{
       <span className="text1">Export Result as excel file.</span>
       <span className="last-updated">Last updated on: 19 August | 23:00</span>
       <button className="export-btn">Export</button>
+    </div>
+    <div>
+      <StudentTable/>
     </div>
 </section>
 

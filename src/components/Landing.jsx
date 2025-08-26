@@ -3,7 +3,7 @@ import Bgimage from"../assets/Bgimage.jpg";
 let Landing =()=>{
     return(<>
    
-    <section className="section" >
+    <section className="section border-3 " >
         {/* write your html here add css in index.css */}
         <div className="landing-container">
             {/* Navbar */}

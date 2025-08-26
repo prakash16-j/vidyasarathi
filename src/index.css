@@ -9,8 +9,8 @@
     background-image: url(../src/assets/curveBg.jpg);
     background-size:  100vw 30rem;
     background-repeat: no-repeat;
-    height: 100vh;
-    /* margin-top: 10px; */
+   
+    
     
 }
 
@@ -67,7 +67,7 @@ background-color: rgb(228, 182, 41);
 }
 .info-section{
   /* border: 2px solid blue; */
-  width: 50vw;
+  width: 58vw;
   font-size: 1.2rem;
   padding: 20px;
   margin: auto;
@@ -84,13 +84,16 @@ background-color: rgb(228, 182, 41);
 .mainheading {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
-      height: 100vh;
+      background-image: url('./assets/curveBg.jpg');
+       background-size:  100vw 30rem;
+    background-repeat: no-repeat;
+     
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 50px;
       color: white;
+      border: 2px solid red;
     }
 
     .left-content {
@@ -113,13 +116,30 @@ background-color: rgb(228, 182, 41);
       font-size: 16px;
       line-height: 1.;
     }
+    .admin-login{
+      background-image: url('../public/Books.png');
+      width: 80%;
+      height: 80vh;
+      position: relative;
+      display: flex;
+      justify-content: end;
+      padding-right: 5rem;
+      align-items: center;
+      border-radius: 10px;
+    }
 
     .login-box {
-      background: rgba(255, 255, 255, 0.5);
+      background: linear-gradient(to top,rgba(137, 129, 129, 0.5), rgba(239, 233, 233, 0.644));
       padding: 30px;
       border-radius: 10px;
-      width: 300px;
+      width: 350px;
       color: black;
+      display: flex;
+      flex-direction: column;
+      
+     height: 70%;
+
+
     }
 
     .login-box h3 {
