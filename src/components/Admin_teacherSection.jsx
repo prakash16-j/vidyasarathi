@@ -30,7 +30,7 @@ const ActionButton = ({ icon, text, notificationCount }) => {
     </button>
   );
 };
-const Admin_teacherSection = () => {
+const Admin_teacherSection= () => {
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
 

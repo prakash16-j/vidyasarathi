@@ -1,4 +1,5 @@
 import curveBg from"../assets/curveBg.jpg";
+import Bgimage from"../assets/Bgimage.jpg";
 let Landing =()=>{
     return(<>
    
@@ -14,10 +15,9 @@ let Landing =()=>{
             <li><a href="#">Community</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">About</a></li>
-            
          </ul>
          <div className="nav-buttons">
-         <button className="login-btn">LOGIN</button>
+         <button id="login-btn">LOGIN</button>
          <button className="signup-btn">SIGN UP</button>
          </div>
         </nav>
@@ -40,9 +40,10 @@ let Landing =()=>{
           Explore your options and make informed decisions with our comprehensive guide to universities around the world. Discover top-ranked institutions, explore diverse programs, and connect with like-minded individuals to build your academic future. With easy-to-use search tools, in-depth profiles, and trusted ratings and reviews, we provide everything you need to make the right choice for your academic journey. Start your search today and find your perfect fit!
           </p>
         </div>
-          <button className="get-start">get Started</button>
+          <button className="get-start">Get Started</button>
+
     </section>
-     
+
     </>)
 }
 export default Landing
