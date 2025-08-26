@@ -1,11 +1,19 @@
 import React from 'react';
+// Importing icons from popular icon libraries via react-icons
 import { FaDollarSign, FaFolder, FaUserFriends, FaFileUpload } from 'react-icons/fa';
 import { IoLogOutOutline } from 'react-icons/io5';
 
+/**
+ * A reusable button component for the "Quick Actions" section.
+ * @param {object} props - The component props.
+ * @param {React.ReactNode} props.icon - The icon element to display.
+ * @param {string} props.text - The text label for the button.
+ * @param {number} [props.notificationCount] - An optional count for the notification badge.
+ */
 const ActionButton = ({ icon, text, notificationCount }) => {
   return (
     <button className="relative flex flex-col items-center justify-center p-6 bg-blue-100 hover:bg-blue-200 rounded-xl shadow-sm transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-      {}
+      {/* Notification Badge: Only shows if notificationCount is a truthy value */}
       {notificationCount && (
         <span className="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 bg-red-500 text-white text-xs font-bold rounded-full">
           {notificationCount}
@@ -22,8 +30,6 @@ const ActionButton = ({ icon, text, notificationCount }) => {
     </button>
   );
 };
-
-
 const Admin_teacherSection = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
