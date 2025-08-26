@@ -49,6 +49,9 @@ const StudentTable = () => {
         <span className="cursor-pointer">Next Page &gt;&gt;</span>
       </div>
     </div>
+
+   
+
   );
 };
 

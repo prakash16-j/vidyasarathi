@@ -1,6 +1,6 @@
 let Admin_teacherSection =()=>{
     return(
-       <section className="bg-red-200 h-100vh">
+       <section>
         {/* start code from here */}
       <div className="container1">
       <div className="card1">
