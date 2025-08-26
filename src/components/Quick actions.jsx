@@ -37,7 +37,7 @@ let obj=[{
             Quick Actions:
             </h1>
             <br />
-            <div className="flex  w-250 justify-evenly h-40">
+            <div className="flex  w-300  justify-evenly h-40">
             {
                 obj.map((e)=>{
                     let{icon,text,img}=e
