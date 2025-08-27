@@ -1,87 +1,36 @@
-
-// import StudentTable from "./StudentTable"
-
-// let Admin_teacherSection =()=>{
-//     return(
-// <<<<<<< HEAD
-//        <section>
-// =======
-//        <section className="">
-// >>>>>>> 34341a3748fc675f7840dbc9d9eba4f5ff8bced5
-//         {/* start code from here */}
-//       <div className="container1">
-//       <div className="card1">
-//         {/* Header */}
-//         <div className="header1">
-//           <h2 className="header2">Search for teacher:</h2>
-//           <label className="radio-label1">
-//             <input type="radio" name="master" className="radio1"/>
-//             Master List
-//           </label>
-//         </div>
-// import React from 'react';
-// // Importing icons from popular icon libraries via react-icons
-// import { FaDollarSign, FaFolder, FaUserFriends, FaFileUpload } from 'react-icons/fa';
-// import { IoLogOutOutline } from 'react-icons/io5';
+import Admin_Footer from "./Admin_Footer";
+import Admin_Navbar from "./Admin_Navbar";
+import Quickaction from "./Quick actions";
+import SearchForTeacher from "./SearchForTeacher";
+import StudentTable from "./StudentTable";
+// Importing icons from popular icon libraries via react-icons
+import { FaDollarSign, FaFolder, FaUserFriends, FaFileUpload } from 'react-icons/fa';
 
 
 
-// const ActionButton = ({ icon, text, notificationCount }) => {
-//   return (
-//     <button className="relative flex flex-col items-center justify-center p-6 bg-blue-100 hover:bg-blue-200 rounded-xl shadow-sm transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-//       {/* Notification Badge: Only shows if notificationCount is a truthy value */}
-//       {notificationCount && (
-//         <span className="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 bg-red-500 text-white text-xs font-bold rounded-full">
-//           {notificationCount}
-//         </span>
-//       )}
-      
-//       {/* Icon Container */}
-//       <div className="mb-4 bg-yellow-400 p-4 rounded-lg">
-//         {icon}
-//       </div>
-      
-//       {/* Text Label */}
-//       <span className="text-center font-semibold text-blue-900">{text}</span>
-//     </button>
-//   );
-// };
-// const Admin_teacherSection= () => {
-//   return (
-//     <div className="min-h-screen bg-gray-50 font-sans">
+const Admin_teacherSection = () => {
+  return (
+    <section className=" flex flex-col justify-around h-[200vh] bg-gray-50 items-center  ">
+    <div className="w-full p-[30px]">
+        <Admin_Navbar/>
+    </div>
+    <div className="top-[150px] border-solid mt-[200px] border-amber-200">
+        <Quickaction />
+    </div>
+     <div className="flex items-center   justify-center">
+       <SearchForTeacher/>
+     </div>
 
-//       {/* Main Content Area */}
-//       <main className="p-4 sm:p-8">
-//         <div className="max-w-screen-xl mx-auto">
-//           <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-200">
-//             <h2 className="text-2xl font-bold text-gray-800 mb-6">Quick Actions:</h2>
-//             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-//               <ActionButton
-//                 icon={<FaDollarSign size={28} className="text-white" />}
-//                 text="Add Faculty/ Remove Faculty"
-//               />
-//               <ActionButton
-//                 icon={<FaFolder size={28} className="text-white" />}
-//                 text="Add Student/ Remove Student"
-//               />
-//               <ActionButton
-//                 icon={<FaUserFriends size={28} className="text-white" />}
-//                 text="View Faculty & Student"
-//                 notificationCount={99}
-//               />
-//               <ActionButton
-//                 icon={<FaFileUpload size={28} className="text-white" />}
-//                 text="Add Regulations"
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       </main>
-//     </div>
-//     <div>
-//       <StudentTable/>
-//     </div>
-//   );
-// };
+      <div className="flex justify-between w-[70%] ml-[20px] border-amber-950 border-2 ">
+        <StudentTable />
+        <StudentTable />
+      </div>
+      <div className="w-[80%] rounded-2xl bg-white drop-shadow-2xl h-20 flex items-center">
+        <Admin_Footer/>
+      </div>
+    </section>
+  );
+};
 
-// export default Admin_teacherSection;
+
+export default Admin_teacherSection;

@@ -31,9 +31,9 @@ let obj=[{
 }
 ]
     return <>
-    <h1 className="h-100 border-2  relative   border-red  ">
-        <div className="border-2 absolute top-20 w-300 left-10 h-10 bg-white rounded-xl drop-shadow-2xl  h-64 ">
-           <h1 className="border-2 border-black h-10  w-50 leading-20 text-center font-bold ">
+    <div className="">
+        <div className="  w-300   bg-white rounded-xl drop-shadow-2xl  h-64 ">
+           <h1 className="  h-10  w-50  text-center font-bold ">
             Quick Actions:
             </h1>
             <br />
@@ -42,9 +42,9 @@ let obj=[{
                 obj.map((e)=>{
                     let{icon,text,img}=e
                     return <>
-                    <div className="border-2 bg-[#D8E7F5]  w-50 rounded-[10px] ">
+                    <div className=" bg-[#D8E7F5]  w-50 rounded-[10px] ">
                         {/* <img className="h-10 w-10" src={img} alt="" /> */}
-                 <div className="border-2  flex items-center justify-center h-18 ">
+                 <div className="  flex items-center justify-center h-18 ">
                     <div className="bg-[#F3B300] rounded-[10px] flex items-center justify-center w-11 h-11"> <h1 className="text-[white]  text-[25px]">{icon}</h1>
                  </div>  
                  </div>
@@ -57,7 +57,7 @@ let obj=[{
             </div>
 
         
-    </h1>
+    </div>
     </>
 }
 export default Quickaction
