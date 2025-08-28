@@ -1,7 +1,5 @@
 let AdminLogin=()=>{
-    return(<>
-    <section>
-        <body>
+    return(<> 
   <section className="mainhead">
     <div className="left-content">
       <h1>VIDYA SARTHI</h1>
@@ -11,7 +9,7 @@ let AdminLogin=()=>{
         knowledge and students access notes with ease.
       </p>
     </div>
-    
+    </section>
     
   <section className="mainheading">
     
