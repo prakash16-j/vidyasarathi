@@ -206,7 +206,7 @@ h3 {
 
 /* -------- Inputs -------- */
 select,
-input[type="text"] {
+.input-style {
   flex: 0 0 200px;
   padding: 10px 16px;
   background: #dce3eb;
