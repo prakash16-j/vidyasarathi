@@ -1,9 +1,8 @@
 let AdminLogin=()=>{
     return(<>
-    
     <section>
         <body>
-  <section className="mainheading">
+  <section className="mainhead">
     <div className="left-content">
       <h1>VIDYA SARTHI</h1>
       <h2>Welcome to Vidya Sarthi</h2>
