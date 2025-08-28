@@ -19,7 +19,7 @@ const StudentTable = () => {
   ];
 
   return (
-    <div className="w-80 mx-auto mt-6 border-2 border-orange-400 rounded-xl bg-white shadow-md overflow-hidden">
+    <div className="w-80 mx-auto mt-6 border-2 border-orange-400 rounded-xl bg-white shadow-md overflow-hidden ">
       {/* Table */}
       <table className="w-full border-collapse">
         <thead>

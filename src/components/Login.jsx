@@ -1,9 +1,9 @@
-let AdminLogin=()=>{
+import AdminLogin from "./AdminLogin"
+
+let Login =()=>{
     return(<>
-    <section>
-        <body>
-  <section className="mainhead">
-    <div className="left-content">
+    <section className="login-section flex justify-around">
+         <div className="left-content">
       <h1>VIDYA SARTHI</h1>
       <h2>Welcome to Vidya Sarthi</h2>
       <p>
@@ -11,14 +11,10 @@ let AdminLogin=()=>{
         knowledge and students access notes with ease.
       </p>
     </div>
-    
-    
-  <section className="mainheading">
-    
-     
-<aside className="admin-login">
+
    
-    <div className="login-box ">
+     
+        <div className=" text-black landing-login  ">
       <h3 className="font-bold text-[20px]">Admin Login</h3>
       <hr class="w-1/2 text-left ml-0 mt-[10px]" />
 
@@ -41,9 +37,8 @@ let AdminLogin=()=>{
         <div><p className="inline">Are You Teacher?</p><a href="" className="font-black">Login as Teacher</a></div>
       </form>
     </div>
-    </aside>
- </section>
-
+    
+    </section>
     </>)
 }
-export default AdminLogin
+export default Login
