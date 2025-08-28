@@ -5,6 +5,7 @@ import AdminLogin from "./components/AdminLogin"
 import Landing from "./components/Landing"
 import Login from "./components/Login"
 import Quickaction from "./components/Quick actions"
+import StudentDetails from "./components/StudentDetails"
 
 
 import StudentTable from "./components/StudentTable"
@@ -13,12 +14,12 @@ function App() {
 
   return (
     <>
-     <Landing/>
+     {/* <Landing/>
      <Login/>
      <AdminLogin/>
      <Admin_teacherSection/>
-     <Admin_StudentSection/>
-  
+     <Admin_StudentSection/> */}
+    <StudentDetails/>
     </>
   )
 }
