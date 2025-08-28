@@ -5,6 +5,7 @@ import AdminLogin from "./components/AdminLogin"
 import Landing from "./components/Landing"
 import Login from "./components/Login"
 import Quickaction from "./components/Quick actions"
+import Student_profilelNavbar from "./components/Student_profileNavbar"
 
 
 import StudentTable from "./components/StudentTable"
@@ -18,6 +19,7 @@ function App() {
      <AdminLogin/>
      <Admin_teacherSection/>
      <Admin_StudentSection/>
+     <Student_profilelNavbar/>
   
     </>
   )
