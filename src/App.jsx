@@ -1,49 +1,36 @@
 // import Admin_teacherSection from "./components/Admin_teacherSection"
-import Admin_StudentSection from "./components/Admin_StudentSection"
-import Admin_teacherSection from "./components/Admin_teacherSection"
-import AdminLogin from "./components/AdminLogin"
-import UploadCards from "./components/Card2"
-import Contact from "./components/contact"
-import Landing from "./components/Landing"
-import Card3 from "./components/Card3"
-import Login from "./components/Login"
-import Quickaction from "./components/Quick actions"
+import Admin_StudentSection from "./components/Admin_StudentSection";
+import Admin_teacherSection from "./components/Admin_teacherSection";
+import AdminLogin from "./components/AdminLogin";
 
-import Student_profilelNavbar from "./components/Student_profileNavbar"
+import Contact from "./components/contact";
+import Landing from "./components/Landing";
+import Card3 from "./components/Card3";
+import Login from "./components/Login";
+import Quickaction from "./components/Quick actions";
 
-import StudentDetails from "./components/StudentDetails"
+import Student_profilelNavbar from "./components/Student_profileNavbar";
 
-import SpecificSearch from "./components/specificsearch_and_contact"
+import StudentDetails from "./components/StudentDetails";
 
+import SpecificSearch from "./components/specificsearch_and_contact";
 
-
-import StudentTable from "./components/StudentTable"
+import StudentTable from "./components/StudentTable";
+import UploadCards from "./components/Card3";
+import StudentProfile from "./components/StudentProfile";
 
 function App() {
   return (
     <>
-     {/* <Landing/>
-     <Login/>
-     <AdminLogin/>
-     <Admin_teacherSection/>
+      <Landing />
+      <Login />
+      <AdminLogin />
+      <Admin_teacherSection />
 
-     <Admin_StudentSection/> */}
-    <StudentDetails/>
-
-     <Admin_StudentSection/>
-
-     <Student_profilelNavbar/>
-
-
-     <Card3></Card3>
-     <UploadCards></UploadCards>
-
-  
-  <SpecificSearch/>
-  <Contact></Contact>
-
+      <Admin_StudentSection />
+      <StudentProfile/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

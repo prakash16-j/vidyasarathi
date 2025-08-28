@@ -16,7 +16,7 @@ let Login =()=>{
      
         <div className=" text-black landing-login  ">
       <h3 className="font-bold text-[20px]">Admin Login</h3>
-      <hr class="w-1/2 text-left ml-0 mt-[10px]" />
+      <hr className="w-1/2 text-left ml-0 mt-[10px]" />
 
       <p>Welcome onboard with us!</p>
     

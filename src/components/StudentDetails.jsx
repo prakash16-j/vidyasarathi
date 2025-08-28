@@ -6,7 +6,7 @@ const StudentDetails = () => {
 
   return (
 
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+    <div className="flex items-center justify-center rounded-2xl h-[30rem] bg-white drop-shadow-2xl p-4">
 
       <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-sm h-100">
 
@@ -100,7 +100,7 @@ const StudentDetails = () => {
 
         <div className="p-4">
 
-          <button className="w-1.5xs flex items-center  justify-self-center-safe bg-yellow-500 text-white font-medium py-2 px-4 rounded-full hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 transition-colors duration-200  mt-4 ">
+          <button className="w-1.5xs flex items-center  justify-self-center-safe bg-yellow-500 text-white font-medium h-[3rem] rounded-full hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 transition-colors duration-200  mt-4 ">
 
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
