@@ -8,6 +8,7 @@ import Quickaction from "./components/Quick actions"
 
 
 import StudentTable from "./components/StudentTable"
+import Teacherinformation from "./components/Teacherinformation"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
      <AdminLogin/>
      <Admin_teacherSection/>
      <Admin_StudentSection/>
+     <Teacherinformation></Teacherinformation>
   
     </>
   )
