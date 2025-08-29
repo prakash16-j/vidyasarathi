@@ -1,12 +1,20 @@
+import AddRegulation_V from "./components/AddRegulation_V"
 import Admin_Navbar from "./components/Admin_Navbar"
+import Quickaction from "./components/Quick actions"
 
 let Addregulation=()=>{
 
     return <>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <section className=" mt-[150px] h-150">
-        <div className="   mt-[2rem] rounded-2xl ">
+
+    <section className=" mt-[150px]  h-150">
+      <div className="h-[7rem] ">
     <Admin_Navbar></Admin_Navbar>
+    </div> 
+    <div className="h-[20rem] flex  justify-center ">
+    <Quickaction></Quickaction>
+    </div>
+    <div>
+     <AddRegulation_V></AddRegulation_V>
     </div>
 
     </section>

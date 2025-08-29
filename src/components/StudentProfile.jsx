@@ -6,12 +6,12 @@ import StudentDetails from "./StudentDetails";
 let StudentProfile = () => {
   return (
     <>
-      <section className="h-[100vh]">
+      <section className="  ">
         <div>
           <Student_profilelNavbar />
         </div>
 
-       <div className="  h-full flex items-center justify-around ">
+       <div className="  h-[40rem] flex items-center justify-around ">
          <aside>
           <StudentDetails />
         </aside>
