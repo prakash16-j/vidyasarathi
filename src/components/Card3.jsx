@@ -54,8 +54,8 @@ const UploadCards = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-white">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 p-6">
+    <div className=" flex justify-center items-center bg-white">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 ">
         {cardData.map((card, index) => (
           <div
             key={index}
@@ -63,7 +63,7 @@ const UploadCards = () => {
             onClick={() => openModal(card)}
           >
             {/* Blue inner box */}
-            <div className="flex-1 w-full flex justify-center items-center bg-[#dbeafe] p-6">
+            <div className="flex-1 w-full flex justify-center items-center bg-[#dbeafe] ">
               <h2 className="text-xl font-semibold text-blue-600 text-center">
                 {card.title}
               </h2>
