@@ -22,14 +22,9 @@ function App() {
      <AdminLogin/>
      <Admin_teacherSection/>
      <Admin_StudentSection/>
-<<<<<<< HEAD
      <Teacherinformation></Teacherinformation>
-=======
-
      <Card3></Card3>
      <UploadCards></UploadCards>
->>>>>>> bfe904593feea58f20e5e463ead9f05b42003ff8
-  
   <SpecificSearch/>
   <Contact></Contact>
     </>
