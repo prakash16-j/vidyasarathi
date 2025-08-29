@@ -59,7 +59,7 @@ const UploadCards = () => {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="w-72 h-44 rounded-xl drop-shadow-2xl bg-white overflow-hidden flex flex-col items-center cursor-pointer"
+            className="w-72 h-44git rounded-xl drop-shadow-2xl bg-white overflow-hidden flex flex-col items-center cursor-pointer"
             onClick={() => openModal(card)}
           >
             {/* Blue inner box */}
