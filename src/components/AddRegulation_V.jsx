@@ -1,7 +1,7 @@
 let AddRegulation_V = () => {
   return (
     <>
-      <div className="  drop-shadow-2xl h-100 flex justify-center bg-white">
+      <div className="  drop-shadow-2xl  h-80 flex justify-center bg-white">
         <div className="  flex justify-between ">
         <div className="w-full ml-20 bg-white shadow-md rounded-lg p-8  w-200 bg-[red]">
           {/* Title */}

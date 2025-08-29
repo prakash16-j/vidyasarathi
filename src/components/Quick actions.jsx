@@ -60,4 +60,4 @@ let obj=[{
     </div>
     </>
 }
-export default Quickaction
+export default Quickaction  

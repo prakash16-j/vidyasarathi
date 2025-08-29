@@ -1,11 +1,12 @@
-import AddstudentR from "./AddstudentR"
+import Add_facultyA from "./Add _facultyA"
 import Admin_Navbar from "./Admin_Navbar"
 import Quickaction from "./Quick actions"
 
-let Addstudents=()=>{
+let Add_faculty=()=>{
 
     return <>
-    <section className=" mt-[150px]  h-250">
+
+     <section className=" mt-[150px]  h-250">
       <div className="h-[7rem] ">
     <Admin_Navbar></Admin_Navbar>
     </div> 
@@ -13,10 +14,9 @@ let Addstudents=()=>{
     <Quickaction></Quickaction>
     </div>
     <div className="h-[10rem] flex  justify-center ">
-    <AddstudentR></AddstudentR>
+    <Add_facultyA></Add_facultyA>
     </div>
-</section>
+    </section>
     </>
-
 }
-export default Addstudents
+export default Add_faculty

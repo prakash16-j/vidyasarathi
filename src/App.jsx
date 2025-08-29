@@ -11,6 +11,7 @@ import Login from "./components/Login"
 import Add_facultyA from "./components/Add _facultyA";
 import Addregulation from "./Addregulation";
 import Addstudents from "./components/Addstudents";
+import Add_faculty from "./components/Add_faculty";
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Admin_teacherSection />
       <Admin_StudentSection />
       <StudentProfile />
+      <Add_faculty></Add_faculty>
       <Addstudents></Addstudents>
       <Addregulation></Addregulation>
       
