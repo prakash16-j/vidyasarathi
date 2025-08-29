@@ -6,6 +6,7 @@ import AdminLogin from "./components/AdminLogin"
 import StudentProfile from "./components/StudentProfile";
 import Landing from "./components/Landing";
 import Login from "./components/Login"
+import Add_facultyA from "./components/Add _facultyA";
 
 
 
@@ -22,7 +23,7 @@ function App() {
 
       <Admin_StudentSection />
       <StudentProfile/>
-
+      <Add_facultyA/>
     </>
   );
 }
