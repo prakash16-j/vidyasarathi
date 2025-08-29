@@ -1,8 +1,8 @@
 // import Admin_teacherSection from "./components/Admin_teacherSection"
+import Addregulation from "./Addregulation";
 import Admin_StudentSection from "./components/Admin_StudentSection";
 import Admin_teacherSection from "./components/Admin_teacherSection";
 import AdminLogin from "./components/AdminLogin";
-
 
 import Landing from "./components/Landing";
 
@@ -21,6 +21,7 @@ function App() {
 
       <Admin_StudentSection />
       <StudentProfile />
+      <Addregulation></Addregulation>
     </>
   );
 }
