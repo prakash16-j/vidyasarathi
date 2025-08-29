@@ -7,7 +7,7 @@ export default function SpecificSearch() {
 
   return (
    <section>
-  <div className=" w-[250px] shadow-lg bg-white border drop-shadow-2xl rounded-[12px] flex flex-col justify-around items-center h-[260px]">
+   <div className=" w-[250px] shadow-lg bg-white border drop-shadow-2xl rounded-[12px] flex flex-col justify-around items-center h-[260px]">
     <h1>Specific Search:</h1>
 
     <input

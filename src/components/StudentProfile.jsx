@@ -6,7 +6,11 @@ import StudentDetails from "./StudentDetails";
 let StudentProfile = () => {
   return (
     <>
+<<<<<<< HEAD
       <section className="">
+=======
+      <section className="  ">
+>>>>>>> 367f096a62b33884d7aa49db943cf1848c67e8e8
         <div>
           <Student_profilelNavbar />
         </div>

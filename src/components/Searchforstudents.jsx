@@ -52,7 +52,7 @@ let obj3=[{
     obj.map((e)=>{
         let{s1,s2}=e
         return<>
-        <select className="rounded-full text-sm" >
+        <select className=" select rounded-full text-sm" >
             <option  className="bg-[#D8E7F5]" value="">{s1}</option>
             <option value=""></option>
             <option value=""></option>
@@ -71,7 +71,7 @@ let obj3=[{
     obj1.map((e)=>{
         let{s2}=e
         return<>
-        <select className="rounded-full text-sm" >
+        <select className="select rounded-full text-sm" >
             <option  className="bg-[#D8E7F5]" value="">{s2}</option>
             <option value=""></option>
             <option value=""></option>
@@ -91,7 +91,7 @@ let obj3=[{
     obj3.map((e)=>{
         let{s3}=e
         return<>
-        <select className="rounded-full text-sm" >
+        <select className="select rounded-full text-sm" >
             <option  className="bg-[#D8E7F5]" value="">{s3}</option>
             <option value=""></option>
             <option value=""></option>

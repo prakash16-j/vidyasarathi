@@ -1,19 +1,5 @@
 let AdminLogin=()=>{
-    return(<> 
-  <section className="mainhead">
-    <div className="left-content">
-      <h1>VIDYA SARTHI</h1>
-      <h2>Welcome to Vidya Sarthi</h2>
-      <p>
-        A digital bridge between students and teachers, where teachers share 
-        knowledge and students access notes with ease.
-      </p>
-    </div>
-    </section>
-    
-    
-
-    
+    return(<>    
   <section className="mainheading">
     
      
