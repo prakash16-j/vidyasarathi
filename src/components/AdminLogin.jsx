@@ -1,3 +1,4 @@
+
 let AdminLogin=()=>{
     return(<>    
   <section className="mainheading">
@@ -23,7 +24,9 @@ let AdminLogin=()=>{
           <a href="#">Forgot Password?</a>
         </div>
 
-        <button className="bg-amber-300 h-[40px] rounded-[20px]" type="submit">LogIn As Admin</button>
+      <Link >
+           <button className="bg-amber-300 h-[40px] rounded-[20px]" type="submit">LogIn As Admin</button>
+      </Link>
         <div><p className="inline">Are You student?</p><a href="" className="font-black">Login as student</a></div>
         <div><p className="inline">Are You Teacher?</p><a href="" className="font-black">Login as Teacher</a></div>
       </form>

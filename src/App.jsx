@@ -1,4 +1,4 @@
-// import Admin_teacherSection from "./components/Admin_teacherSection"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddRegulation_V from "./components/AddRegulation_V"
 
 
@@ -20,16 +20,19 @@ import Add_faculty from "./components/Add_faculty";
 function App() {
   return (
     <>
-
-      <Landing/>
-      <Login />
-      <AdminLogin />
-      <Admin_teacherSection />
-      <Admin_StudentSection />
-      <StudentProfile />
-      <Add_faculty></Add_faculty>
-      <Addstudents></Addstudents>
-      <Addregulation></Addregulation>
+ <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        {/* <Route path="/admin-login" element={<AdminLogin />} /> */}
+        <Route path="/admin-teachers" element={<Admin_teacherSection />} />
+        <Route path="/admin-students" element={<Admin_StudentSection />} />
+        <Route path="/student-profile" element={<StudentProfile />} />
+        <Route path="/add-faculty" element={<Add_faculty />} />
+        <Route path="/add-students" element={<Addstudents />} />
+        <Route path="/add-regulation" element={<Addregulation />} />
+      </Routes>
+    </Router>
       
      
     </>

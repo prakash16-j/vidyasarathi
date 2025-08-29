@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import curveBg from"../assets/curveBg.jpg";
 import Bgimage from"../assets/Bgimage.jpg";
 let Landing =()=>{
@@ -17,7 +18,9 @@ let Landing =()=>{
             <li><a href="#">About</a></li>
          </ul>
          <div className="nav-buttons">
-         <button id="login-btn">LOGIN</button>
+         <Link to="/login">
+                <button id="login-btn">LOGIN</button>
+              </Link>
          <button className="signup-btn">SIGN UP</button>
          </div>
         </nav>

@@ -1,4 +1,5 @@
 import AdminLogin from "./AdminLogin"
+import { Link } from "react-router-dom";
 
 let Login =()=>{
     return(<>
@@ -32,7 +33,9 @@ let Login =()=>{
           <a href="#">Forgot Password?</a>
         </div>
 
+        <Link to="/admin-students">
         <button className="bg-amber-300 h-[40px] rounded-[20px]" type="submit">LogIn As Admin</button>
+        </Link>
         <div><p className="inline">Are You student?</p><a href="" className="font-black">Login as student</a></div>
         <div><p className="inline">Are You Teacher?</p><a href="" className="font-black">Login as Teacher</a></div>
       </form>
