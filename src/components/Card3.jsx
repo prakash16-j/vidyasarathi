@@ -129,9 +129,10 @@ const UploadCards = () => {
   };
 
   return (
-    <div className="flex justify-center items-center bg-white">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        {cardData.map((card, index) => (
+    <div className=" flex justify-center items-center bg-white">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 ">
+        {
+        cardData.map((card, index) => (
           <div
             key={index}
             className="w-72 h-44 rounded-xl drop-shadow-2xl bg-white overflow-hidden flex flex-col items-center cursor-pointer"
