@@ -12,8 +12,9 @@ import Add_facultyA from "./components/Add _facultyA";
 import Addregulation from "./Addregulation";
 import Addstudents from "./components/Addstudents";
 import Add_faculty from "./components/Add_faculty";
-import Teacher_Student_Search from "./components/Teacher_Student_Search";
+// import Teacher_Student_Search from "./components/Teacher_Student_Search";
 import Admin_ViewPage from "./components/Admin_ViewPage";
+import AddstudentR from "./components/AddstudentR";
 
 
 
@@ -33,11 +34,11 @@ function App() {
         <Route path="/add-faculty" element={<Add_faculty />} />
         <Route path="/add-students" element={<Addstudents />} />
         <Route path="/add-regulation" element={<Addregulation />} />
-        <Route path="/student_teacher_ser" element={<Teacher_Student_Search/>} />
+        {/* <Route path="/student_teacher_ser" element={<Teacher_Student_Search/>} /> */}
       </Routes>
     </Router>
       
-     
+   
     </>
   );
 }

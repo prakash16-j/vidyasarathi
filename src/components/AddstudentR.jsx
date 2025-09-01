@@ -1,7 +1,7 @@
 let AddstudentR=()=>{
     return(<>
-      <section className="flex flex-col items-center  gap-3">
-        <div className="flex  gap-5 h-100 w-[50%] items-end">
+      <section className="flex flex-col items-center w-full h-200  gap-3">
+        <div className="flex  gap-5 h-100 w-[70%]  items-end justify-center">
    <div className=" w-70 shadow-lg bg-white border drop-shadow-2xl   rounded-[12px] flex flex-col justify-center gap-2 items-center h-90 ">
 
     <input
@@ -43,7 +43,7 @@ let AddstudentR=()=>{
     </div>
     
 
-    <div className=" w-60  bg-white border drop-shadow-2xl rounded-[12px] flex flex-col justify-center gap-3 items-center h-[260px] ">
+    <div className=" w-60  bg-white git  drop-shadow-2xl rounded-[12px] flex flex-col justify-center gap-6 items-center h-[260px] ">
       <div className=" h-50 w-40  justify-start items-center gap-3 flex flex-col">
     <h1 className="font-normal flex  w-30">Remove Student:</h1>
     <input type="text"
@@ -64,8 +64,8 @@ let AddstudentR=()=>{
     </div>
     </div>
     </div>
-    <div className="w-[190px] shadow-lg bg-white border drop-shadow-2xl rounded-[12px] flex flex-col justify-around items-center h-[100px] ">
-      <button className="bg-yellow-500 text-white px-6 py-2 rounded-lg w-[130px]  placeholder-emerald-50 ">
+    <div className="w-[190px] shadow-lg bg-white border drop-shadow-2xl rounded-[12px] flex flex-col justify-around items-center h-30 ">
+      <button className="bg-yellow-500 text-white px-6 py-2 rounded-lg w-40 placeholder-emerald-50 ">
       View <br />
       StudentList
     </button>

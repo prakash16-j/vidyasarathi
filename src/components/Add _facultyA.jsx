@@ -23,11 +23,11 @@ import React, { useState } from "react";
   };
 
   return (
-    <div className="flex flex-col items-center justify-self-center-safe h-[100vh] border-4 border-dashed gap-1.5 shadow-lg w-full  bg-gray-100 m-1.5">
+    <div className="flex flex-col items-center justify-self-center-safe h-[110vh]  gap-1.5 shadow-lg w-full  bg-gray-100 m-1.5">
     <br />  
     <div className=" w-full h-full ">
         
-        <div className="flex items-center justify-center w-full h-full  border-2 b border-solid gap-20">
+        <div className="flex items-center justify-center w-full h-full gap-20">
 
            <div className=" w-100 shadow-lg bg-white  drop-shadow-2xl rounded-[12px] flex border-solid flex-col  items-center h-[30rem]">
            <br /> <div className="flex justify-start  w-70  h-7 ">
@@ -72,7 +72,7 @@ import React, { useState } from "react";
         </div>
 
         {/* Remove Faculty */}
-          <div className=" w-[380px] shadow-lg bg-white border  round-[12px] drop-shadow-2xl rounded-[12px] flex flex-col gap-4 items-center h-[30rem]">
+          <div className=" w-[380px] shadow-lg bg-white border  round-[12px] drop-shadow-2xl rounded-[12px] flex flex-col gap-4 items-center h-[20rem]">
              <br /> <div className="flex justify-start  w-70  h-7 ">
               <h1 className="font-medium text-4xs pt-50 ">Remove Faculty:</h1>
               </div>
@@ -102,8 +102,8 @@ import React, { useState } from "react";
       </div>
       <br />
       {/* View Faculty List */}
-      <div className="pt-20 h-30">
-     <div className=" w-[180px] shadow-lg bg-white border drop-shadow-2xl rounded-[12px] flex flex-col justify-around items-center h-[80px]">
+      <div className="p-20  h-30">
+     <div className=" w-[240px] shadow-lg bg-white border drop-shadow-2xl rounded-[12px] flex flex-col justify-around items-center h-[100px]">
 
       <button
         className="mt-6 bg-yellow-500 hover:bg-yellow-600 w-33 text-white px-8 py-3 rounded-md font-semibold shadow"

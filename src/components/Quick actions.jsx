@@ -15,7 +15,7 @@ let Quickaction = () => {
           Remove Faculty
         </>
       ),
-      link: "", // 👈 route added
+      link: "/add-faculty", 
     },
     {
       icon: <BsCardHeading />,
@@ -25,7 +25,7 @@ let Quickaction = () => {
           Remove Student
         </>
       ),
-      link: "",
+      link: "/add-students",
     },
     {
       icon: <TbUserScan />,

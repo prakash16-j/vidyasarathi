@@ -33,4 +33,4 @@ const Admin_teacherSection = () => {
 };
 
 
-export default Admin_teacherSection;
+  export default Admin_teacherSection;
