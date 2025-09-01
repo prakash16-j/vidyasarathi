@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Add_facultyA() {
+ function Add_facultyA() {
   const [faculty, setFaculty] = useState({
     name: "",
     id: "",
@@ -102,3 +102,4 @@ export default function Add_facultyA() {
     </div>
   );
 }
+export default Add_facultyA

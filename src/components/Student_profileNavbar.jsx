@@ -5,7 +5,7 @@ let Student_profilelNavbar = ()=>{
                  <div className="flex items-center justify-between  w-[40%]">
                        <div className="flex items-center  justify-around  w-[50%]">
                         <img src={logo} alt="" />
-                    <div className="text-[32px] font-[300px]">
+                    <div className="text-[1.2rem] font-[300px]">
                          <h1>Admin Panel</h1>
                      <h1>Vidya Sarthi</h1>
                     </div>

@@ -1,6 +1,5 @@
-// import Admin_teacherSection from "./components/Admin_teacherSection"
-
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AddRegulation_V from "./components/AddRegulation_V"
 
 
 import Admin_StudentSection from "./components/Admin_StudentSection"
@@ -10,7 +9,9 @@ import StudentProfile from "./components/StudentProfile";
 import Landing from "./components/Landing";
 import Login from "./components/Login"
 import Add_facultyA from "./components/Add _facultyA";
-import AddRegulation_V from "./components/AddRegulation_V";
+import Addregulation from "./Addregulation";
+import Addstudents from "./components/Addstudents";
+import Add_faculty from "./components/Add_faculty";
 
 
 
@@ -19,14 +20,21 @@ import AddRegulation_V from "./components/AddRegulation_V";
 function App() {
   return (
     <>
-
-      <Landing/>
-      <Login />
-      <AdminLogin />
-      <Admin_teacherSection />
-      <AddRegulation_V></AddRegulation_V>
-      <Admin_StudentSection />
-      <StudentProfile />
+ <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        {/* <Route path="/admin-login" element={<AdminLogin />} /> */}
+        <Route path="/admin-teachers" element={<Admin_teacherSection />} />
+        <Route path="/admin-students" element={<Admin_StudentSection />} />
+        <Route path="/student-profile" element={<StudentProfile />} />
+        <Route path="/add-faculty" element={<Add_faculty />} />
+        <Route path="/add-students" element={<Addstudents />} />
+        <Route path="/add-regulation" element={<Addregulation />} />
+      </Routes>
+    </Router>
+      
+     
     </>
   );
 }

@@ -237,7 +237,7 @@ h3 {
     }
 
 /* -------- Inputs -------- */
-select,
+.select,
 .input-style {
   flex: 0 0 200px;
   padding: 10px 16px;

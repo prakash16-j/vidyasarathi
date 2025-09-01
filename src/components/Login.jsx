@@ -1,4 +1,5 @@
 import AdminLogin from "./AdminLogin"
+import { Link } from "react-router-dom";
 
 let Login =()=>{
     return(<>
@@ -23,17 +24,19 @@ let Login =()=>{
 
       <form className="flex  flex-col gap-[5px]">
         <label htmlFor="email">Admin Email ID</label>
-        <input className="bg-blue-200  h-[40px] rounded-[20px] " type="email" id="email" placeholder="Enter your username" />
+        <input className="bg-blue-100  h-[40px] font-bold rounded-[20px] placeholder:text-center" type="email" id="email" placeholder="Enter your username" />
 
         <label htmlFor="password">Password</label>
-        <input className="bg-blue-200 border-2 h-[40px] rounded-[20px] " type="password" id="password" placeholder="Enter your password" />
+        <input className="bg-blue-100 border-2 h-[40px] font-bold rounded-[20px] placeholder:text-center " type="password" id="password"  placeholder="Enter your password" />
 
         <div className="extra">
-          <a href="#">Forgot Password?</a>
+          <a href="#" className="hover:text-yellow-300">Forgot Password?</a>
         </div>
 
-        <button className="bg-amber-300 h-[40px] rounded-[20px]" type="submit">LogIn As Admin</button>
-        <div><p className="inline">Are You student?</p><a href="" className="font-black">Login as student</a></div>
+        <Link to="/admin-students">
+        <button className="bg-amber-300 h-[40px] font-medium w-78 rounded-[20px]" type="submit">LogIn As Admin</button>
+        </Link>
+        <div className="flex items-center"><p className="">Are You student?</p><a href="" className="font-black">Login as student</a></div>
         <div><p className="inline">Are You Teacher?</p><a href="" className="font-black">Login as Teacher</a></div>
       </form>
     </div>

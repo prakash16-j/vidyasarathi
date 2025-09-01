@@ -46,7 +46,7 @@ s2:"Name"
     obj.map((e)=>{
         let{s1,}=e
         return<>
-        <select className="rounded-full text-sm" >
+        <select className="select rounded-full text-sm" >
             <option  className="bg-[#D8E7F5]" value="">{s1}</option>
             <option value=""></option>
             <option value=""></option>
@@ -65,7 +65,7 @@ s2:"Name"
     obj1.map((e)=>{
         let{s2}=e
         return<>
-        <select className="rounded-full text-sm w-[13rem]" >
+        <select className="select rounded-full text-sm w-[13rem]" >
             <option  className="bg-[#D8E7F5]" value="">{s2}</option>
             <option value=""></option>
             <option value=""></option>
