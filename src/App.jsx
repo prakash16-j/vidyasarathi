@@ -14,7 +14,7 @@ import Addstudents from "./components/Addstudents";
 import Add_faculty from "./components/Add_faculty";
 // import Teacher_Student_Search from "./components/Teacher_Student_Search";
 import Admin_ViewPage from "./components/Admin_ViewPage";
-import AddstudentR from "./components/AddstudentR";
+import StudentProfile_adminview from "./StudentProfile_adminview";
 
 
 
@@ -37,8 +37,7 @@ function App() {
         {/* <Route path="/student_teacher_ser" element={<Teacher_Student_Search/>} /> */}
       </Routes>
     </Router>
-      
-   
+<StudentProfile_adminview></StudentProfile_adminview>
     </>
   );
 }
