@@ -33,7 +33,7 @@ let Login =()=>{
           <a href="#" className="hover:text-yellow-300">Forgot Password?</a>
         </div>
 
-        <Link to="/student_teacher_ser">
+        <Link to="/admin/view">
         <button className="bg-amber-300 h-[40px] font-medium w-78 rounded-[20px]" type="submit">LogIn As Admin</button>
         </Link>
         <div className="flex items-center"><p className="">Are You student?</p><a href="" className="font-black">Login as student</a></div>

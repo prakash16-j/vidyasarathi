@@ -1,5 +1,10 @@
+import Admin_Footer from "./Admin_Footer"
+import Admin_Navbar from "./Admin_Navbar"
 import Admin_StudentSection from "./Admin_StudentSection"
 import Admin_teacherSection from "./Admin_teacherSection"
+import Quickaction from "./Quick actions"
+import SearchForTeacher from "./SearchForTeacher"
+import StudentTable from "./StudentTable"
 
 let Teacher_Student_Search =()=> {
   return (
@@ -8,7 +13,7 @@ let Teacher_Student_Search =()=> {
         <Admin_Navbar/>
     </div>
     <div className="top-[150px] border-solid mt-[200px] border-amber-200">
-        <Quickaction />
+        <Quickaction  />
     </div>
      <div className="flex items-center   justify-center">
        <SearchForTeacher/>
