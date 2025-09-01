@@ -1,7 +1,7 @@
 import { IoMdDownload } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 
-let searchforstudents=()=>{
+let Searchforstudents=()=>{
 let obj=[{
     s1:(<>Select Course <IoMdDownload /></>)
 },
@@ -110,4 +110,4 @@ let obj3=[{
     </div>
     </>
 }
-export default searchforstudents
+export default Searchforstudents

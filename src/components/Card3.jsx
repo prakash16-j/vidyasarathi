@@ -136,6 +136,7 @@ const UploadCards = () => {
           <div
             key={index}
             className="w-72 h-44 rounded-xl drop-shadow-2xl bg-white overflow-hidden flex flex-col items-center cursor-pointer"
+            // className="w-72 h-68 rounded-xl drop-shadow-2xl bg-white overflow-hidden flex flex-col items-center cursor-pointer"
             onClick={() => openModal(card)}
           >
             <div className="flex-1 w-full flex justify-center items-center bg-[#dbeafe]">
