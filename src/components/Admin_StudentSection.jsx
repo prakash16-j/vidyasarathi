@@ -17,10 +17,10 @@ let Admin_StudentSection =()=>{
      <div className="flex items-center   justify-center">
        <Searchforstudents/>
      </div>
-      <div className="flex justify-between w-[50%] items-center h-[400px] rounded-xl">
+      <div className="flex justify-between w-300 items-center h-[400px] rounded-xl">
        <StudentTable2/>
       </div>
-     <div className="w-[80%] rounded-2xl bg-white drop-shadow-2xl h-20 flex items-center">
+     <div className="w-300  rounded-2xl bg-white drop-shadow-2xl h-20 flex items-center">
         <Admin_Footer/>
       </div>
     </section>

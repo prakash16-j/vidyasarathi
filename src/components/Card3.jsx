@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 
+// Required for accessibility
+Modal.setAppElement("#root");
+
 const cardData = [
   { title: (<>Upload <br />PYQ</>), label: "PYQ" },
   { title: (<>Upload <br />Notes</>), label: "Notes" },
@@ -8,17 +11,36 @@ const cardData = [
   { title: (<>Upload <br /> News & Events</>), label: "Events" },
 ];
 
-// Required for accessibility
-Modal.setAppElement("#root");
-
 const UploadCards = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [activeCard, setActiveCard] = useState(null);
 
-  // State for dropdown selections
   const [selectedYear, setSelectedYear] = useState("");
   const [selectedSemester, setSelectedSemester] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
+
+  // For subjects & concepts
+  const [selectedSubjects, setSelectedSubjects] = useState(["", "", "", ""]);
+  const [selectedConcepts, setSelectedConcepts] = useState(["", "", ""]);
+
+  // For Events
+  const [eventType, setEventType] = useState("");
+  const [eventText, setEventText] = useState("");
+
+  const subjectOptions = [
+    "Maths",
+    "Physics",
+    "CS101",
+    "Operating Systems",
+    "Data Structures",
+    "AI",
+    "ML",
+    "DBMS",
+    "Networks",
+    "Cyber Security",
+  ];
+
+  const conceptOptions = ["Basics", "Advanced", "Case Study", "Problems"];
 
   const openModal = (card) => {
     setActiveCard(card);
@@ -30,6 +52,10 @@ const UploadCards = () => {
     setSelectedYear("");
     setSelectedSemester("");
     setSelectedFile(null);
+    setSelectedSubjects(["", "", "", ""]);
+    setSelectedConcepts(["", "", ""]);
+    setEventType("");
+    setEventText("");
     setModalIsOpen(false);
   };
 
@@ -43,13 +69,62 @@ const UploadCards = () => {
       alert("Please select Year, Semester, and a File!");
       return;
     }
-
     console.log(
       `Uploading ${activeCard.label} for Year: ${selectedYear}, Semester: ${selectedSemester}, File: ${selectedFile.name}`
     );
+    // 🔗 Add API call
+    closeModal();
+  };
 
-    // 🔗 Add your API call / upload logic here
+  const handleSubjectChange = (index, value) => {
+    const updatedSubjects = [...selectedSubjects];
+    updatedSubjects[index] = value;
+    setSelectedSubjects(updatedSubjects);
+  };
 
+  const handleConceptChange = (index, value) => {
+    const updatedConcepts = [...selectedConcepts];
+    updatedConcepts[index] = value;
+    setSelectedConcepts(updatedConcepts);
+  };
+
+  const handlePYQSubmit = () => {
+    if (!selectedSemester || selectedSubjects.some((subj) => subj === "")) {
+      alert("Please select semester and all subject priorities!");
+      return;
+    }
+    console.log("Uploading PYQ:", { selectedSemester, selectedSubjects });
+    // 🔗 Add API call
+    closeModal();
+  };
+
+  const handleNotesSubmit = () => {
+    if (!selectedSemester || selectedSubjects.some((s) => s === "") || selectedConcepts.some((c) => c === "")) {
+      alert("Please select semester, subjects, and concepts!");
+      return;
+    }
+    console.log("Uploading Notes:", { selectedSemester, selectedSubjects, selectedConcepts });
+    // 🔗 Add API call
+    closeModal();
+  };
+
+  const handleQBSubmit = () => {
+    if (!selectedSemester || selectedSubjects.some((s) => s === "") || selectedConcepts.some((c) => c === "")) {
+      alert("Please select semester, subjects, and concepts!");
+      return;
+    }
+    console.log("Uploading QB:", { selectedSemester, selectedSubjects, selectedConcepts });
+    // 🔗 Add API call
+    closeModal();
+  };
+
+  const handleEventSubmit = () => {
+    if (!eventType || !eventText.trim()) {
+      alert("Please enter event type and description!");
+      return;
+    }
+    console.log("Uploading Event:", { eventType, eventText });
+    // 🔗 Add API call
     closeModal();
   };
 
@@ -60,17 +135,14 @@ const UploadCards = () => {
         cardData.map((card, index) => (
           <div
             key={index}
-            className="w-72 h-44 git rounded-xl drop-shadow-2xl bg-white overflow-hidden flex flex-col items-center cursor-pointer"
+            className="w-72 h-44 rounded-xl drop-shadow-2xl bg-white overflow-hidden flex flex-col items-center cursor-pointer"
             onClick={() => openModal(card)}
           >
-            {/* Blue inner box */}
-            <div className="flex-1 w-full flex justify-center items-center bg-[#dbeafe] ">
+            <div className="flex-1 w-full flex justify-center items-center bg-[#dbeafe]">
               <h2 className="text-xl font-semibold text-blue-600 text-center">
                 {card.title}
               </h2>
             </div>
-
-            {/* Bottom label */}
             <div className="w-full bg-white py-2 flex justify-center">
               <span className="text-green-500 font-medium">{card.label}</span>
             </div>
@@ -78,12 +150,12 @@ const UploadCards = () => {
         ))}
       </div>
 
-      {/* Modal (Dynamic for all 4 cards) */}
+      {/* Modal */}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Upload Modal"
-        className="bg-white rounded-xl shadow-xl p-6 max-w-md mx-auto mt-40 outline-none"
+        className="bg-white rounded-xl shadow-xl p-6 w-11/12 max-w-2xl mx-auto mt-10 outline-none"
         overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
       >
         {activeCard && (
@@ -92,66 +164,218 @@ const UploadCards = () => {
               {`Upload ${activeCard.label}`}
             </h2>
 
-            {/* Year Dropdown */}
-            <label className="block mb-2 text-gray-700">Select Year</label>
-            <select
-              value={selectedYear}
-              onChange={(e) => setSelectedYear(e.target.value)}
-              className="w-full mb-4 border border-gray-300 p-2 rounded"
-            >
-              <option value="">-- Choose Year --</option>
-              <option value="1">1st Year</option>
-              <option value="2">2nd Year</option>
-              <option value="3">3rd Year</option>
-              <option value="4">4th Year</option>
-            </select>
+            {/* PYQ */}
+            {activeCard.label === "PYQ" ? (
+              <>
+                <label className="block mb-2 text-gray-700 font-medium">
+                  Choose Semester:
+                </label>
+                <select
+                  value={selectedSemester}
+                  onChange={(e) => setSelectedSemester(e.target.value)}
+                  className="w-full mb-4 border border-gray-300 p-2 rounded bg-blue-100"
+                >
+                  <option value="">-- Choose Semester --</option>
+                  <option value="7">7th Semester (2023 - 24 Autumn)</option>
+                  <option value="8">8th Semester (2024 - 25 Spring)</option>
+                </select>
 
-            {/* Semester Dropdown */}
-            <label className="block mb-2 text-gray-700">Select Semester</label>
-            <select
-              value={selectedSemester}
-              onChange={(e) => setSelectedSemester(e.target.value)}
-              className="w-full mb-4 border border-gray-300 p-2 rounded"
-            >
-              <option value="">-- Choose Semester --</option>
-              <option value="1">Semester 1</option>
-              <option value="2">Semester 2</option>
-              <option value="3">Semester 3</option>
-              <option value="4">Semester 4</option>
-              <option value="5">Semester 5</option>
-              <option value="6">Semester 6</option>
-              <option value="7">Semester 7</option>
-              <option value="8">Semester 8</option>
-            </select>
+                <label className="block mb-2 text-gray-700 font-medium">
+                  Choose Subjects: (Priority Wise)
+                </label>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+                  {["A", "B", "C", "D"].map((label, index) => (
+                    <select
+                      key={label}
+                      value={selectedSubjects[index]}
+                      onChange={(e) => handleSubjectChange(index, e.target.value)}
+                      className="border border-gray-300 p-2 rounded bg-blue-100"
+                    >
+                      <option value="">{`${label}. Choose`}</option>
+                      {subjectOptions.map((subject) => (
+                        <option key={subject} value={subject}>{subject}</option>
+                      ))}
+                    </select>
+                  ))}
+                </div>
 
-            {/* File Upload */}
-            <label className="block mb-2 text-gray-700">Select File</label>
-            <input
-              type="file"
-              onChange={handleFileChange}
-              className="mb-4 border border-gray-300 p-2 rounded w-full"
-            />
-            {selectedFile && (
-              <p className="text-sm text-gray-600 mb-4">
-                Selected file: <span className="font-medium">{selectedFile.name}</span>
-              </p>
-            )}
+                <div className="flex justify-center">
+                  <button
+                    onClick={handlePYQSubmit}
+                    className="px-6 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-500 font-semibold"
+                  >
+                    Submit Now
+                  </button>
+                </div>
+              </>
+            ) : activeCard.label === "Notes" ? (
+              <>
+                {/* Notes Layout */}
+                <label className="block mb-2 text-gray-700 font-medium">
+                  Choose Semester:
+                </label>
+                <select
+                  value={selectedSemester}
+                  onChange={(e) => setSelectedSemester(e.target.value)}
+                  className="w-full mb-4 border border-gray-300 p-2 rounded bg-blue-100"
+                >
+                  <option value="">-- Choose Semester --</option>
+                  <option value="7">7th Semester (2023 - 24 Autumn)</option>
+                  <option value="8">8th Semester (2024 - 25 Spring)</option>
+                </select>
 
-            {/* Buttons */}
-            <div className="flex justify-end gap-3">
-              <button
-                onClick={closeModal}
-                className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handleUpload}
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-              >
-                Upload
-              </button>
-            </div>
+                <label className="block mb-2 text-gray-700 font-medium">
+                  Choose Subjects (Priority Wise):
+                </label>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+                  {["A", "B", "C", "D"].map((label, index) => (
+                    <select
+                      key={label}
+                      value={selectedSubjects[index]}
+                      onChange={(e) => handleSubjectChange(index, e.target.value)}
+                      className="border border-gray-300 p-2 rounded bg-blue-100"
+                    >
+                      <option value="">{`${label}. Choose`}</option>
+                      {subjectOptions.map((subject) => (
+                        <option key={subject} value={subject}>{subject}</option>
+                      ))}
+                    </select>
+                  ))}
+                </div>
+
+                <label className="block mb-2 text-gray-700 font-medium">
+                  Choose Concept:
+                </label>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-6">
+                  {["A", "B", "C"].map((label, index) => (
+                    <select
+                      key={label}
+                      value={selectedConcepts[index]}
+                      onChange={(e) => handleConceptChange(index, e.target.value)}
+                      className="border border-gray-300 p-2 rounded bg-blue-100"
+                    >
+                      <option value="">{`${label}. Choose`}</option>
+                      {conceptOptions.map((c) => (
+                        <option key={c} value={c}>{c}</option>
+                      ))}
+                    </select>
+                  ))}
+                </div>
+
+                <div className="flex justify-center">
+                  <button
+                    onClick={handleNotesSubmit}
+                    className="px-6 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-500 font-semibold"
+                  >
+                    Submit Now
+                  </button>
+                </div>
+              </>
+            ) : activeCard.label === "QB" ? (
+              <>
+                {/* QB Layout */}
+                <label className="block mb-2 text-gray-700 font-medium">
+                  Choose Semester:
+                </label>
+                <select
+                  value={selectedSemester}
+                  onChange={(e) => setSelectedSemester(e.target.value)}
+                  className="w-full mb-4 border border-gray-300 p-2 rounded bg-blue-100"
+                >
+                  <option value="">-- Choose Semester --</option>
+                  <option value="7">7th Semester (2023 - 24 Autumn)</option>
+                  <option value="7">7th Semester (2023 - 24 Autumn)</option>
+                  <option value="7">7th Semester (2023 - 24 Autumn)</option>
+                  <option value="7">7th Semester (2023 - 24 Autumn)</option>
+                  <option value="7">7th Semester (2023 - 24 Autumn)</option>
+                  <option value="8">8th Semester (2024 - 25 Spring)</option>
+                </select>
+
+                <label className="block mb-2 text-gray-700 font-medium">
+                  Choose Subjects (Priority Wise):
+                </label>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+                  {["A", "B", "C", "D"].map((label, index) => (
+                    <select
+                      key={label}
+                      value={selectedSubjects[index]}
+                      onChange={(e) => handleSubjectChange(index, e.target.value)}
+                      className="border border-gray-300 p-2 rounded bg-blue-100"
+                    >
+                      <option value="">{`${label}. Choose`}</option>
+                      {subjectOptions.map((subject) => (
+                        <option key={subject} value={subject}>{subject}</option>
+                      ))}
+                    </select>
+                  ))}
+                </div>
+
+                <label className="block mb-2 text-gray-700 font-medium">
+                  Choose Concept:
+                </label>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-6">
+                  {["A", "B", "C"].map((label, index) => (
+                    <select
+                      key={label}
+                      value={selectedConcepts[index]}
+                      onChange={(e) => handleConceptChange(index, e.target.value)}
+                      className="border border-gray-300 p-2 rounded bg-blue-100"
+                    >
+                      <option value="">{`${label}. Choose`}</option>
+                      {conceptOptions.map((c) => (
+                        <option key={c} value={c}>{c}</option>
+                      ))}
+                    </select>
+                  ))}
+                </div>
+
+                <div className="flex justify-center">
+                  <button
+                    onClick={handleQBSubmit}
+                    className="px-6 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-500 font-semibold"
+                  >
+                    Submit Now
+                  </button>
+                </div>
+              </>
+            ) : activeCard.label === "Events" ? (
+              <>
+                {/* Events Layout */}
+                <label className="block mb-2 text-gray-700 font-medium">
+                  Choose News/Event Type:
+                </label>
+                <select
+                  value={eventType}
+                  onChange={(e) => setEventType(e.target.value)}
+                  className="w-full mb-4 border border-gray-300 p-2 rounded bg-blue-100"
+                >
+                  <option value="">-- Select --</option>
+                  <option value="Announcement">Announcement</option>
+                  <option value="Workshop">Workshop</option>
+                  <option value="Seminar">Seminar</option>
+                  <option value="Exam">Exam</option>
+                </select>
+
+                <label className="block mb-2 text-gray-700 font-medium">
+                  Enter the text:
+                </label>
+                <textarea
+                  value={eventText}
+                  onChange={(e) => setEventText(e.target.value)}
+                  placeholder="Describe the event..."
+                  className="w-full mb-4 border border-gray-300 p-2 rounded bg-blue-100"
+                />
+
+                <div className="flex justify-center">
+                  <button
+                    onClick={handleEventSubmit}
+                    className="px-6 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-500 font-semibold"
+                  >
+                    Submit Now
+                  </button>
+                </div>
+              </>
+            ) : null}
           </>
         )}
       </Modal>
