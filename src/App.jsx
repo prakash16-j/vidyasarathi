@@ -12,6 +12,7 @@ import Add_facultyA from "./components/Add _facultyA";
 import Addregulation from "./Addregulation";
 import Addstudents from "./components/Addstudents";
 import Add_faculty from "./components/Add_faculty";
+import AddstudentR from "./components/AddstudentR";
 
 
 
