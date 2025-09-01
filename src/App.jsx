@@ -20,20 +20,7 @@ import Add_faculty from "./components/Add_faculty";
 function App() {
   return (
     <>
- <Router>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/login" element={<Login />} />
-        {/* <Route path="/admin-login" element={<AdminLogin />} /> */}
-        <Route path="/admin-teachers" element={<Admin_teacherSection />} />
-        <Route path="/admin-students" element={<Admin_StudentSection />} />
-        <Route path="/student-profile" element={<StudentProfile />} />
-        <Route path="/add-faculty" element={<Add_faculty />} />
-        <Route path="/add-students" element={<Addstudents />} />
-        <Route path="/add-regulation" element={<Addregulation />} />
-      </Routes>
-    </Router>
-      
+<Add_facultyA></Add_facultyA>      
      
     </>
   );

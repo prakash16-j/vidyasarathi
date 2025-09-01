@@ -23,81 +23,94 @@ import React, { useState } from "react";
   };
 
   return (
-    <div className="flex flex-col items-center justify-self-center-safe min-h-screen-[200px] shadow-lg w-[600px]  bg-gray-100">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl shadow-md">
+    <div className="flex flex-col items-center justify-self-center-safe h-[100vh] border-4 border-dashed gap-1.5 shadow-lg w-full  bg-gray-100 m-1.5">
+    <br />  
+    <div className=" w-full h-full ">
         
-        {/* Add Faculty */}
-        <div className=" w-[250px] shadow-lg bg-white border drop-shadow-2xl rounded-[12px] flex flex-col justify-around items-center h-[260px]">
-            <h1 className="font-medium text-2xs">Add Faculty:</h1>
+        <div className="flex items-center justify-center w-full h-full  border-2 b border-solid gap-20">
 
-           <input
-             type="text"
-             value={removeId}
-             onChange={(e) => setRemoveId(e.target.value)}
-             className="h-[35px] w-[200px]  rounded-[12px] text-center placeholder-black bg-blue-100 px-3 "
-             placeholder="Enter Roll Number"
-           />
-                      <input
-             type="text"
-             value={removeId}
-             onChange={(e) => setRemoveId(e.target.value)}
-             className="h-[35px] w-[200px]  rounded-[12px] text-center placeholder-black bg-blue-100 px-3 "
-             placeholder="Enter Faculty Id"
-           />
-           <input
-             type="text"
-             value={removeId}
-             onChange={(e) => setRemoveId(e.target.value)}
-             className="h-[35px] w-[200px]  rounded-[12px] text-center placeholder-black bg-blue-100 px-3 "
-             placeholder="Enter Faculty Email"
-           />
-           <input
-             type="text"
-             value={removeId}
-             onChange={(e) => setRemoveId(e.target.value)}
-             className="h-[35px] w-[200px]  rounded-[12px] text-center placeholder-black bg-blue-100 px-3 "
-             placeholder="Enter Password"
-           />
+           <div className=" w-100 shadow-lg bg-white  drop-shadow-2xl rounded-[12px] flex border-solid flex-col  items-center h-[30rem]">
+           <br /> <div className="flex justify-start  w-70  h-7 ">
+              <h1 className="font-medium text-4xs pt-50 ">Add Faculty:</h1>
+              </div>
 
-           <button className="bg-yellow-500 text-white px-6 py-2 rounded-lg w-[60px]">
+              <div className="flex flex-col gap-6">
+           <input
+             type="text"
+             value={removeId}
+             onChange={(e) => setRemoveId(e.target.value)}
+             className="h-[45px] w-[300px]  rounded-[12px] placeholder-black bg-blue-100 shadow-lg  drop-shadow-2xl  "
+             placeholder="   Enter Faculty Name"
+           />
+            <input
+             type="text"
+             value={removeId}
+             onChange={(e) => setRemoveId(e.target.value)}
+             className="h-[45px] w-[300px]  rounded-[12px] text-left placeholder-black bg-blue-100 px-3 shadow-lg  drop-shadow-2xl "
+             placeholder="   Enter Faculty Id"
+           />
+           <input
+             type="text"
+             value={removeId}
+             onChange={(e) => setRemoveId(e.target.value)}
+             className="h-[45px] w-[300px]  rounded-[12px] text-left placeholder-black bg-blue-100 px-3 shadow-lg  drop-shadow-2xl"
+             placeholder="   Enter Faculty Email"
+           />
+           <input
+             type="text"
+             value={removeId}
+             onChange={(e) => setRemoveId(e.target.value)}
+             className="h-[45px] w-[300px]  rounded-[12px] text-left placeholder-black bg-blue-100 px-3 shadow-lg  drop-shadow-2xl"
+             placeholder="   Enter Password"
+           />
+           <div className=" flex w-75 justify-center">
+           <button className="bg-yellow-500   rounded-lg flex items-center justify-center text-white w-[200px] h-[40px]">
              Add
            </button>
+           </div>
+        </div>
         </div>
 
-
         {/* Remove Faculty */}
-          <div className=" w-[250px] shadow-lg bg-white border  round-[12px] drop-shadow-2xl rounded-[12px] flex flex-col justify-around items-center h-[260px]">
-            <h1 className="font-medium text-2xs">Remove Faculty:</h1>
+          <div className=" w-[380px] shadow-lg bg-white border  round-[12px] drop-shadow-2xl rounded-[12px] flex flex-col gap-4 items-center h-[30rem]">
+             <br /> <div className="flex justify-start  w-70  h-7 ">
+              <h1 className="font-medium text-4xs pt-50 ">Remove Faculty:</h1>
+              </div>
 
+           <div className="flex flex-col gap-6">
            <input
              type="text"
-             value={removeId}
-             onChange={(e) => setRemoveId(e.target.value)}
-             className="h-[35px] w-[200px]  rounded-[12px] text-center placeholder-black bg-blue-100 px-3 "
-             placeholder="Enter Roll Number"
+             className="h-[45px] w-[300px]  rounded-[12px] text-left placeholder-black bg-blue-100 px-3 shadow-lg  border drop-shadow-2xl "
+             placeholder="   Enter Roll Number"
            />
-           
            <input
              type="text"
-             className="h-[35px] w-[200px]  rounded-[12px] text-center bg-blue-100 px-3"
-             placeholder="Name (Auto)"
+             className="h-[45px] w-[300px]  rounded-[12px] text-left bg-blue-100 px-3 shadow-lg border drop-shadow-2xl"
+             placeholder="   Name (Auto)"
            />
-       
-           <button className="bg-yellow-500 text-white px-6 py-2 rounded-lg w-[60px]">
+       <div className="flex items-center justify-center  w-full">
+           <button className="bg-yellow-500 text-white px-7 py-2 rounded-lg w-[200px] h-[40px]">
              Remove
            </button>
+       </div>
+           </div>
           </div>
+        </div>
+        {/* Add Faculty */}
+ 
 
       </div>
       <br />
       {/* View Faculty List */}
+      <div className="pt-20 h-30">
      <div className=" w-[180px] shadow-lg bg-white border drop-shadow-2xl rounded-[12px] flex flex-col justify-around items-center h-[80px]">
 
       <button
-        className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-md font-semibold shadow"
+        className="mt-6 bg-yellow-500 hover:bg-yellow-600 w-33 text-white px-8 py-3 rounded-md font-semibold shadow"
       >
-        View Faculty List
+        View <br /> Faculty List
       </button>
+     </div>
      </div>
     </div>
   );
