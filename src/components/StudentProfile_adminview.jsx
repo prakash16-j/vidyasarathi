@@ -1,5 +1,5 @@
-import Admin_Navbar from "./components/Admin_Navbar"
-import Quickaction from "./components/Quick actions"
+import Admin_Navbar from "./Admin_Navbar"
+import Quickaction from "./Quick actions"
 
 let StudentProfile_adminview=()=>{
 let obj=[{

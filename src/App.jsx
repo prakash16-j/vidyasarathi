@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AddRegulation_V from "./components/AddRegulation_V"
+// import AddRegulation_V from "./components/AddRegulation_V"
 
 
 import Admin_StudentSection from "./components/Admin_StudentSection"
@@ -9,12 +9,12 @@ import StudentProfile from "./components/StudentProfile";
 import Landing from "./components/Landing";
 import Login from "./components/Login"
 import Add_facultyA from "./components/Add _facultyA";
-import Addregulation from "./Addregulation";
+import Addregulation from "./components/Addregulation";
 import Addstudents from "./components/Addstudents";
 import Add_faculty from "./components/Add_faculty";
 // import Teacher_Student_Search from "./components/Teacher_Student_Search";
 import Admin_ViewPage from "./components/Admin_ViewPage";
-import StudentProfile_adminview from "./StudentProfile_adminview";
+import StudentProfile_adminview from "./components/StudentProfile_adminview";
 
 
 
@@ -34,10 +34,10 @@ function App() {
         <Route path="/add-faculty" element={<Add_faculty />} />
         <Route path="/add-students" element={<Addstudents />} />
         <Route path="/add-regulation" element={<Addregulation />} />
+        <Route path="/studentProfile" element={<StudentProfile_adminview/>}/>
         {/* <Route path="/student_teacher_ser" element={<Teacher_Student_Search/>} /> */}
       </Routes>
     </Router>
-<StudentProfile_adminview></StudentProfile_adminview>
     </>
   );
 }

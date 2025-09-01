@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 let AddstudentR=()=>{
     return(<>
       <section className="flex flex-col items-center w-full h-200  gap-3">
@@ -64,12 +66,14 @@ let AddstudentR=()=>{
     </div>
     </div>
     </div>
+   <Link to="/studentProfile">
     <div className="w-[190px] shadow-lg bg-white border drop-shadow-2xl rounded-[12px] flex flex-col justify-around items-center h-30 ">
       <button className="bg-yellow-500 text-white px-6 py-2 rounded-lg w-40 placeholder-emerald-50 ">
       View <br />
       StudentList
     </button>
     </div>
+   </Link>
   
   
 </section>
