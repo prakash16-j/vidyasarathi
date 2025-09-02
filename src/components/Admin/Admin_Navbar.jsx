@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import logo from "../../assets/logo.png"
 let Admin_Navbar=()=>{
 
@@ -5,7 +6,7 @@ let Admin_Navbar=()=>{
             <header className=" bg-white h-21 w-full flex justify-around items-center drop-shadow-2xl ">
              <div className="flex items-center justify-between  w-[40%]">
                    <div className="flex items-center  justify-around  w-[50%]">
-                    <img className="h-19 w-19" src={logo} alt="" />
+                   <Link to="/admin/view"> <img src={logo} alt="" /></Link>
                 <div className="text-[1rem] font-[300px]">
                      <h1>Admin Panel</h1>
                  <h1>Vidya Sarthi</h1>

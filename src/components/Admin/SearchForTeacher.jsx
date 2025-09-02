@@ -1,5 +1,6 @@
 import { IoMdDownload } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 let SearchForTeacher=()=>{
 let obj=[{
@@ -76,8 +77,8 @@ s2:"Name"
         
     })
    }
-       <h1 className="border-2 bg-[#F3B300] flex rounded-[100px] float-right font-bold items-center justify-center text-[white] w-40">Apply</h1>
-
+<Link to='/teacher-table'>       <h1 className="border-2 bg-[#F3B300] h-10 flex rounded-[100px] float-right font-bold items-center justify-center text-[white] w-40">Apply</h1>
+</Link>
    </div>
    <br />
    

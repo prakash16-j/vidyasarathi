@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Admin_Navbar from "./Admin_Navbar";
+import Quickaction from "./Quick actions";
+import Admin_Footer from "./Admin_Footer";
 
 const StudentTable = () => {
   const students = [
@@ -28,8 +31,15 @@ const StudentTable = () => {
   // ✅ Total pages
   const totalPages = Math.ceil(students.length / rowsPerPage);
 
-  return (
-    <div className=" flex w-[40%] h-full flex-col drop-shadow-2xl  rounded-xl bg-white shadow-md overflow-hidden">
+  return ( <>
+ <section className=" flex flex-col justify-around gap-[5rem] h-[130vh] bg-gray-50 items-center">
+        <div className="w-full p-[30px]">
+        <Admin_Navbar/>
+    </div>
+    <div className="top-[150px] border-solid mt-[200px] border-amber-200">
+        <Quickaction/>
+    </div>
+     <div className=" flex w-[40%] h-70 flex-col drop-shadow-2xl  rounded-xl bg-white shadow-md overflow-hidden">
       {/* Table */}
       <table className="w-full h-full  ">
         <thead className="text-center h-10 ">
@@ -76,6 +86,12 @@ const StudentTable = () => {
         </button>
       </div>
     </div>
+
+     <div className="w-300 rounded-2xl bg-white drop-shadow-2xl h-20 flex items-center">
+        <Admin_Footer/>
+      </div> 
+  </section>
+  </>
   );
 };
 
