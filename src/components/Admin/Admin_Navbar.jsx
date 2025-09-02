@@ -2,10 +2,10 @@ import logo from "../../assets/logo.png"
 let Admin_Navbar=()=>{
 
     return(<>
-            <header className=" bg-white w-full flex justify-around items-center drop-shadow-2xl ">
+            <header className=" bg-white h-21 w-full flex justify-around items-center drop-shadow-2xl ">
              <div className="flex items-center justify-between  w-[40%]">
                    <div className="flex items-center  justify-around  w-[50%]">
-                    <img src={logo} alt="" />
+                    <img className="h-19 w-19" src={logo} alt="" />
                 <div className="text-[1rem] font-[300px]">
                      <h1>Admin Panel</h1>
                  <h1>Vidya Sarthi</h1>

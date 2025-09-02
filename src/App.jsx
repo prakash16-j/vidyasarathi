@@ -2,19 +2,20 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import AddRegulation_V from "./components/AddRegulation_V"
 
 
-import Admin_StudentSection from "../Admin/Admin_StudentSection"
-import Admin_teacherSection from "../Admin/Admin_teacherSection"
+import Admin_StudentSection from "./components/Admin/Admin_StudentSection"
+import Admin_teacherSection from "./components/Admin/Admin_teacherSection"
 
-import StudentProfile from "../Admin/StudentProfile";
-import Landing from "../Admin/Landing";
-import Login from "../Admin/Login"
+import StudentProfile from "./components/Admin/StudentProfile";
+import Landing from "./components/Admin/Landing";
+import Login from "./components/Admin/Login"
 
-import Addregulation from "../Admin/Addregulation";
-import Addstudents from "../Admin/Addstudents";
-import Add_faculty from "../Admin/Add_faculty";
+import Addregulation from "./components/Admin/Addregulation";
+import Addstudents from "./components/Admin/Addstudents";
+import Add_faculty from "./components/Admin/Add_faculty";
 // import Teacher_Student_Search from "./components/Teacher_Student_Search";
-import Admin_ViewPage from "../Admin/Admin_ViewPage";
-import StudentProfile_adminview from "../Admin/StudentProfile_adminview";
+import Admin_ViewPage from "./components/Admin/Admin_ViewPage";
+import StudentProfile_adminview from "./components/Admin/StudentProfile_adminview";
+import ViewStudents_faculty from "./components/Admin/ViewStudents_faculty";
 
 
 
@@ -38,6 +39,7 @@ function App() {
         {/* <Route path="/student_teacher_ser" element={<Teacher_Student_Search/>} /> */}
       </Routes>
     </Router>
+    <ViewStudents_faculty></ViewStudents_faculty>
     </>
   );
 }
