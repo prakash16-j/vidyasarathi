@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Admin_Navbar from "./Admin_Navbar";
+import Quickaction from "./Quick actions";
 
 const StudentTable2 = () => {
   const students = [
@@ -43,8 +45,15 @@ const StudentTable2 = () => {
   };
 
   return (
-    <div className="w-500  h-full rounded-2xl">
-      <table className="w-full h-full text-center  border-separate border-spacing-0.8">
+  <section className=" flex flex-col justify-around h-[110] gap-[5rem] bg-gray-50 items-center">
+        <div className="w-full p-[30px]">
+        <Admin_Navbar/>
+    </div>
+    <div className="top-[150px] border-solid mt-[200px] border-amber-200">
+        <Quickaction/>
+    </div>
+     <div className="w-300  m-auto h-70 rounded-2xl">
+      <table className="w-300 h-70 text-center   border-separate border-spacing-0.8">
         <thead className="h-10" >
           <tr className="bg-orange-400 text-white ">
             <th className="p-2  rounded-tl-xl text-center">Roll Number</th>
@@ -113,6 +122,7 @@ const StudentTable2 = () => {
         </button>
       </div>
     </div>
+   </section>
   );
 };
 

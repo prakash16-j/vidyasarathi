@@ -16,23 +16,23 @@ const Admin_ViewPage = () => {
     <div className="top-[150px] border-solid mt-[200px] border-amber-200">
         <Quickaction />
     </div>
-     <div className="flex items-center   justify-center">
+     {/* <div className="flex items-center   justify-center">
        <SearchForTeacher/>
-     </div>
+     </div> */}
 
-      <div className="flex w-300  justify-center items-center h-70 ">
+      {/* <div className="flex w-300  justify-center items-center h-70 ">
         <StudentTable />
         
       </div>
        <div className="flex items-center   justify-center">
        <Searchforstudents/>
-     </div>
-      <div className="flex justify-between w-[50%] items-center h-[400px] rounded-xl">
+     </div> */}
+      {/* <div className="flex justify-between w-[50%] items-center h-[400px] rounded-xl">
        <StudentTable2/>
       </div>
       <div className="w-300 rounded-2xl bg-white drop-shadow-2xl h-20 flex items-center">
         <Admin_Footer/>
-      </div>
+      </div> */}
     </section>
   );
 };

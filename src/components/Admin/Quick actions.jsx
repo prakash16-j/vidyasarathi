@@ -34,7 +34,7 @@ let Quickaction = () => {
           View Faculty <br /> & Student
         </>
       ),
-      link: "/admin/view",
+      link: "/admin-students",
     },
     {
       icon: <LiaFileUploadSolid />,
