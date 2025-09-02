@@ -2,19 +2,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import AddRegulation_V from "./components/AddRegulation_V"
 
 
-import Admin_StudentSection from "./components/Admin_StudentSection"
-import Admin_teacherSection from "./components/Admin_teacherSection"
-import AdminLogin from "./components/AdminLogin"
-import StudentProfile from "./components/StudentProfile";
-import Landing from "./components/Landing";
-import Login from "./components/Login"
-import Add_facultyA from "./components/Add _facultyA";
-import Addregulation from "./components/Addregulation";
-import Addstudents from "./components/Addstudents";
-import Add_faculty from "./components/Add_faculty";
+import Admin_StudentSection from "../Admin/Admin_StudentSection"
+import Admin_teacherSection from "../Admin/Admin_teacherSection"
+
+import StudentProfile from "../Admin/StudentProfile";
+import Landing from "../Admin/Landing";
+import Login from "../Admin/Login"
+
+import Addregulation from "../Admin/Addregulation";
+import Addstudents from "../Admin/Addstudents";
+import Add_faculty from "../Admin/Add_faculty";
 // import Teacher_Student_Search from "./components/Teacher_Student_Search";
-import Admin_ViewPage from "./components/Admin_ViewPage";
-import StudentProfile_adminview from "./components/StudentProfile_adminview";
+import Admin_ViewPage from "../Admin/Admin_ViewPage";
+import StudentProfile_adminview from "../Admin/StudentProfile_adminview";
 
 
 

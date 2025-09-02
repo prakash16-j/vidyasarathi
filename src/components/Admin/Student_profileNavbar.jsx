@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png"
+import logo from "../../assets/logo.png"
 let Student_profilelNavbar = ()=>{
      return(<>
                 <header className=" bg-white w-full flex justify-around items-center drop-shadow-2xl ">

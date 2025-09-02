@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png"
+import logo from "../../assets/logo.png"
 let Admin_Navbar=()=>{
 
     return(<>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import curveBg from"../assets/curveBg.jpg";
-import Bgimage from"../assets/Bgimage.jpg";
+// import curveBg from"../assets/curveBg.jpg";
+// import Bgimage from"../assets/Bgimage.jpg";
 let Landing =()=>{
     return(<>
    

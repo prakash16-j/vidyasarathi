@@ -53,7 +53,7 @@ let Quickaction = () => {
             {obj.map((e, i) => {
               let { icon, text, img, link } = e;
               return (
-                // <Link to={link} key={i}>
+                <Link to={link} key={i}>
                   <div className="bg-[#D8E7F5] w-50 rounded-[10px] cursor-pointer hover:scale-105 transition">
                     {/* <img className="h-10 w-10" src={img} alt="" /> */}
                     <div className="flex items-center justify-center h-18">
@@ -68,7 +68,7 @@ let Quickaction = () => {
   {text}
 </h1>
                   </div>
-                // </Link>
+                </Link>
               );
             })}
           </div>
