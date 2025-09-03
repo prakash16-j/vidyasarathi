@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Admin_StudentSection from "./components/Admin/Admin_StudentSection"
 import Admin_teacherSection from "./components/Admin/Admin_teacherSection"
 
-import StudentProfile from "./components/Admin/StudentProfile";
+import StudentProfile from "./components/Teachers/TeacherProfile";
 import Landing from "./components/Admin/Landing";
 import Login from "./components/Admin/Login"
 
@@ -17,6 +17,8 @@ import Admin_ViewPage from "./components/Admin/Admin_ViewPage";
 import StudentProfile_adminview from "./components/Admin/StudentProfile_adminview";
 import StudentTable from "./components/Admin/StudentTable";
 import StudentTable2 from "./components/Admin/StudentTable2";
+import TeacherLogin from "./components/Teachers/TeacherLogin";
+import TeacherProfile from "./components/Teachers/TeacherProfile";
 
 
 
@@ -29,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
+
         <Route path="/admin/view" element={<Admin_ViewPage />} />
         <Route path="/admin-teachers" element={<Admin_teacherSection />} />
         <Route path="/admin-students" element={<Admin_StudentSection />} />
@@ -39,7 +42,8 @@ function App() {
         <Route path="/add-students" element={<Addstudents />} />
         <Route path="/add-regulation" element={<Addregulation />} />
         <Route path="/studentProfile" element={<StudentProfile_adminview/>}/>
-        {/* <Route path="/student_teacher_ser" element={<Teacher_Student_Search/>} /> */}
+        <Route path="/teacher-login" element={<TeacherLogin/>}/>
+        <Route path="/teacher-profile" element={<TeacherProfile/>}/>
       </Routes>
     </Router>
     </>

@@ -1,9 +1,9 @@
 import UploadCards from "./Card3";
 import Options from "./Options";
-import Student_profilelNavbar from "./Student_profileNavbar";
-import StudentDetails from "./StudentDetails";
+import Student_profilelNavbar from "../Admin/Student_profileNavbar";
+import StudentDetails from "../Admin/StudentDetails";
 
-let StudentProfile = () => {
+let TeacherProfile = () => {
   return (
     <>
       <section className="  ">
@@ -24,4 +24,4 @@ let StudentProfile = () => {
     </>
   );
 };
-export default StudentProfile;
+export default TeacherProfile;
