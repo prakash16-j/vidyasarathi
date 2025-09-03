@@ -42,7 +42,7 @@ function App() {
         {/* <Route path="/student_teacher_ser" element={<Teacher_Student_Search/>} /> */}
       </Routes>
     </Router>
-    <ViewStudents_faculty></ViewStudents_faculty>
+    {/* <ViewStudents_faculty></ViewStudents_faculty> */}
     </>
   );
 }
