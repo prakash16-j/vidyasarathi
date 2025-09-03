@@ -46,6 +46,7 @@ function App() {
         <Route path="/teacher-profile" element={<TeacherProfile/>}/>
       </Routes>
     </Router>
+    <ViewStudents_faculty></ViewStudents_faculty>
     </>
   );
 }
