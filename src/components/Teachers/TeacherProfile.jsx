@@ -2,13 +2,15 @@ import UploadCards from "./Card3";
 import Options from "./Options";
 import Student_profilelNavbar from "../Admin/Student_profileNavbar";
 import StudentDetails from "../Admin/StudentDetails";
+import FacultyNavbar from "./FacultyNavbar";
 
 let TeacherProfile = () => {
   return (
     <>
+    <FacultyNavbar></FacultyNavbar>
       <section className="  ">
         <div>
-          <Student_profilelNavbar />
+          {/* <Student_profilelNavbar /> */}
         </div>
 
        <div className="  h-[40rem] flex items-center justify-around ">
