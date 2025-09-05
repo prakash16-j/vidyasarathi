@@ -156,41 +156,45 @@ const UploadCards = () => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Upload Modal"
-        className="bg-white rounded-xl shadow-xl p-6 w-11/12 max-w-2xl mx-auto mt-10 outline-none"
+        className="bg-white rounded-xl shadow-xl p-6 w-300 h-150 mx-auto mt-10 outline-none"
         overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
       >
         {activeCard && (
           <>
-            <h2 className="text-xl font-bold text-blue-600 mb-4">
-              {`Upload ${activeCard.label}`}
+          
+            <h2 className="text-xl font-bold bg-amber-400 text-blue-600 ">
+              {`Upload ${activeCard.label} Here`}
             </h2>
-
+             
             {/* PYQ */}
             {activeCard.label === "PYQ" ? (
-              <>
-                <label className="block mb-2 text-gray-700 font-medium">
+              <div className=" flex flex-col items-center  gap-10 border-2 border-solid">
+               <div className="flex  gap-5 mt-10 ">
+                 <label className=" mb-2  text-gray-700 font-medium">
                   Choose Semester:
                 </label>
                 <select
                   value={selectedSemester}
                   onChange={(e) => setSelectedSemester(e.target.value)}
-                  className="w-full mb-4 border border-gray-300 p-2 rounded bg-blue-100"
+                  className=" mb-4 border w-150 h-10  border-gray-300 p-2 rounded bg-blue-100"
                 >
                   <option value="">-- Choose Semester --</option>
                   <option value="7">7th Semester (2023 - 24 Autumn)</option>
                   <option value="8">8th Semester (2024 - 25 Spring)</option>
                 </select>
-
-                <label className="block mb-2 text-gray-700 font-medium">
-                  Choose Subjects: (Priority Wise)
+               </div>
+            
+               <div className="flex gap-5 ">
+                 <label className="block  text-gray-700 font-medium">
+                  Choose Subjects: <br /> (Priority Wise)
                 </label>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+                <div className="w-150 h-100  flex flex-col gap-5">
                   {["A", "B", "C", "D"].map((label, index) => (
                     <select
                       key={label}
                       value={selectedSubjects[index]}
                       onChange={(e) => handleSubjectChange(index, e.target.value)}
-                      className="border border-gray-300 p-2 rounded bg-blue-100"
+                      className="border border-gray-300 p-2  h-10 w-full rounded bg-blue-100"
                     >
                       <option value="">{`${label}. Choose`}</option>
                       {subjectOptions.map((subject) => (
@@ -199,16 +203,17 @@ const UploadCards = () => {
                     </select>
                   ))}
                 </div>
+               </div>
 
-                <div className="flex justify-center">
+                <div className="flex justify-center border-2 border-solid">
                   <button
                     onClick={handlePYQSubmit}
-                    className="px-6 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-500 font-semibold"
+                    className=" bg-yellow-400 text-white rounded hover:bg-yellow-500 font-semibold"
                   >
                     Submit Now
                   </button>
                 </div>
-              </>
+              </div>
             ) : activeCard.label === "Notes" ? (
               <>
                 {/* Notes Layout */}

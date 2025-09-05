@@ -1,4 +1,4 @@
-import UploadCards from "./Card3";
+import UploadCards from "./UploadCards";
 import Options from "./Options";
 import Student_profilelNavbar from "../Admin/Student_profileNavbar";
 import StudentDetails from "../Admin/StudentDetails";

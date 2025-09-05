@@ -2,15 +2,11 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App'
-import FacultyNavbar from './components/Teachers/FacultyNavbar'
-import TeacherProfile from './components/Teachers/TeacherProfile'
-import UpdateFacultyProfile from './components/Teachers/UpdateFacultyProfile'
-import FacultyRequestReport from './components/Teachers/FacultyRequestReport'
-import FacultyEditMaterial from './components/Teachers/FacultyEditmaterial'
-import AcademicCalender from './components/Teachers/AcademicCalender'
+import { RouterProvider } from 'react-router-dom'
+import routes from './Router/Router'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App></App>
+    <RouterProvider router={routes}/>
   </StrictMode>,
 )
