@@ -6,9 +6,9 @@ const StudentDetails = () => {
 
   return (
 
-    <div className="flex items-center justify-center rounded-2xl h-[30rem] bg-white drop-shadow-2xl p-4">
+    <div className="flex items-center justify-center rounded-2xl h-110 bg-white drop-shadow-2xl ">
 
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-sm h-100">
+      <div className="bg-white rounded-lg shadow-lg  w-full max-w-sm h-100">
 
         {/* Profile Image Section */}
 
@@ -70,7 +70,7 @@ const StudentDetails = () => {
 
         {/* Contact Details Section */}
 
-        <div className="px-4 py-2 text-gray-700 text-sm justify-self-center-safe">
+        <div className="px-4 py-2 text-gray-700 text-sm justify-center">
 
           <p className="mb-1"><span className="font-semibold">Phone:</span> +91 XXXXXXXXXX</p>
 
@@ -98,21 +98,12 @@ const StudentDetails = () => {
 
         {/* Request Edit Button */}
 
-        <div className="p-4">
-
-          <button className="w-1.5xs flex items-center  justify-self-center-safe bg-yellow-500 text-white font-medium h-[3rem] rounded-full hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 transition-colors duration-200  mt-4 ">
-
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-
-            </svg>
-
-            Request Edit
-
-          </button>
-
-        </div>
+        {/* Request Edit Button */}
+<div className="flex justify-center py-5">
+  <button className="w-40 flex items-center justify-center bg-yellow-500 text-white font-medium h-[3rem] rounded-full hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 transition-colors duration-200">
+    Request Edit
+  </button>
+</div>
 
       </div>
 

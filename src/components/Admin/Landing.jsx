@@ -1,5 +1,6 @@
-import curveBg from"../assets/curveBg.jpg";
-import Bgimage from"../assets/Bgimage.jpg";
+import { Link } from "react-router-dom";
+// import curveBg from"../assets/curveBg.jpg";
+// import Bgimage from"../assets/Bgimage.jpg";
 let Landing =()=>{
     return(<>
    
@@ -8,17 +9,19 @@ let Landing =()=>{
         <div className="landing-container">
             {/* Navbar */}
         <nav className="navbar">
-            <div className="logo">Mrs. College Guide</div>
-         <ul className="nav-links">
+            <div className="logo font-medium">Mrs. College Guide</div>
+         <ul className="nav-links font-medium">
             <li><a href="#">Universities</a></li>
             <li><a href="#">Courses</a></li>
             <li><a href="#">Community</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">About</a></li>
          </ul>
-         <div className="nav-buttons">
-         <button id="login-btn">LOGIN</button>
-         <button className="signup-btn">SIGN UP</button>
+         <div className="nav-buttons flex items-center cursor">
+         <Link to="/login">
+                <button id="login-btn">LOGIN</button>
+              </Link>
+         <button className="signup-btn rounded-[30px]">SIGN UP</button>
          </div>
         </nav>
         </div>

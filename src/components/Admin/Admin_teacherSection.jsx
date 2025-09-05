@@ -10,8 +10,8 @@ import { FaDollarSign, FaFolder, FaUserFriends, FaFileUpload } from 'react-icons
 
 const Admin_teacherSection = () => {
   return (
-    <section className=" flex flex-col justify-around h-[200vh] bg-gray-50 items-center  ">
-    <div className="w-full p-[30px]">
+    <section className=" flex flex-col justify-around gap-10 bg-gray-50 items-center  ">
+    <div className="w-full mt-10">
         <Admin_Navbar/>
     </div>
     <div className="top-[150px] border-solid mt-[200px] border-amber-200">
@@ -21,11 +21,11 @@ const Admin_teacherSection = () => {
        <SearchForTeacher/>
      </div>
 
-      <div className="flex justify-between w-[70%] ml-[20px] border-amber-950 border-2 ">
+      <div className="flex w-300  justify-between items-center h-70 ">
         <StudentTable />
         <StudentTable />
       </div>
-      <div className="w-[80%] rounded-2xl bg-white drop-shadow-2xl h-20 flex items-center">
+      <div className="w-300 rounded-2xl bg-white drop-shadow-2xl h-20 flex items-center">
         <Admin_Footer/>
       </div>
     </section>
@@ -33,4 +33,4 @@ const Admin_teacherSection = () => {
 };
 
 
-export default Admin_teacherSection;
+  export default Admin_teacherSection;

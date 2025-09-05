@@ -7,11 +7,11 @@ let Options =()=>{
             heading :"uploaded module"
         },
         {
-            logo : <FaCheck className="bg-orange-400  h-[4rem] w-[4rem] rounded-full text-white " />,
+            logo : <FaCheck className="bg-orange-400  h-[3rem] w-[3rem] rounded-full text-white " />,
             heading :"Profile Status"
         },
         {
-            logo : <FaCheckDouble className="bg-green-400 h-[4rem] w-[4rem] rounded-full text-white " />,
+            logo : <FaCheckDouble className="bg-green-400 h-[3rem] w-[3rem] rounded-full text-white " />,
             heading :"Request/Report"
         },
         {

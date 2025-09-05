@@ -2,6 +2,7 @@ import Admin_Footer from "./Admin_Footer"
 import Admin_Navbar from "./Admin_Navbar"
 import Quickaction from "./Quick actions"
 import Searchforstudents from "./Searchforstudents"
+import SearchForTeacher from "./SearchForTeacher"
 import StudentTable2 from "./StudentTable2"
 
 
@@ -17,12 +18,10 @@ let Admin_StudentSection =()=>{
      <div className="flex items-center   justify-center">
        <Searchforstudents/>
      </div>
-      <div className="flex justify-between w-[50%] items-center h-[400px] rounded-xl">
-       <StudentTable2/>
-      </div>
-     <div className="w-[80%] rounded-2xl bg-white drop-shadow-2xl h-20 flex items-center">
-        <Admin_Footer/>
-      </div>
+     <div className="flex items-center   justify-center">
+       <SearchForTeacher/>
+     </div>
+     
     </section>
     
     </>)
