@@ -29,7 +29,7 @@ let UpdateFacultyProfile = () => {
 
   return (
     <>
-    <FacultyNavbar></FacultyNavbar>
+    <FacultyNavbar title="update Profile"></FacultyNavbar>
       <section className=" h-200 border-solid items-center justify-center flex gap-6 p-4">
         {/* LEFT SIDE: Profile Card */}
         <div className="flex items-center w-[22rem] h-120 justify-center rounded-2xl bg-white drop-shadow-2xl">

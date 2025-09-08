@@ -8,7 +8,7 @@ let Add_faculty=()=>{
 
      <section className=" mt-[150px]  h-250">
       <div className="h-[7rem] ">
-    <Admin_Navbar></Admin_Navbar>
+    <Admin_Navbar ></Admin_Navbar>
     </div> 
     <div className="h-[23rem] flex  justify-center ">
     <Quickaction></Quickaction>
