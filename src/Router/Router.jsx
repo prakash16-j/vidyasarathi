@@ -16,6 +16,7 @@ import Addregulation from "../components/Admin/Addregulation";
 import StudentProfile_adminview from "../components/Admin/StudentProfile_adminview";
 import TeacherLogin from "../components/Teachers/TeacherLogin";
 import TeacherProfile from "../components/Teachers/TeacherProfile";
+import UpdateFacultyProfile from "../components/Teachers/UpdateFacultyProfile";
 
 const routes = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const routes = createBrowserRouter([
       { path: "studentProfile", element: <StudentProfile_adminview /> },
       { path: "teacher-login", element: <TeacherLogin /> },
       { path: "teacher-profile", element: <TeacherProfile /> },
+      { path: "updatefacultyprofile", element: <UpdateFacultyProfile/> },
     ],
   },
 ]);

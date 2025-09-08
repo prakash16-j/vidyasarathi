@@ -4,9 +4,11 @@ import './index.css'
 import App from './App'
 import { RouterProvider } from 'react-router-dom'
 import routes from './Router/Router'
+import FindmaterialPop from './components/Students/FindmaterialPop'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={routes}/>
+    <FindmaterialPop></FindmaterialPop>
   </StrictMode>,
 )

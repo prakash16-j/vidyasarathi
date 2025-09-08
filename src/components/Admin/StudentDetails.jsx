@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -100,9 +101,11 @@ const StudentDetails = () => {
 
         {/* Request Edit Button */}
 <div className="flex justify-center py-5">
+ <Link to="/updatefacultyprofile">
   <button className="w-40 flex items-center justify-center bg-yellow-500 text-white font-medium h-[3rem] rounded-full hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500 transition-colors duration-200">
     Request Edit
   </button>
+ </Link>
 </div>
 
       </div>
