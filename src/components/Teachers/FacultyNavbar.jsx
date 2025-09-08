@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import logo from "../../assets/logo.png"
-let FacultyNavbar=()=>{
+let FacultyNavbar=({title})=>{
 
     return <>
             <header className=" bg-white h-21 w-full flex justify-around items-center drop-shadow-2xl ">
@@ -13,7 +13,7 @@ let FacultyNavbar=()=>{
                 </div>
                 </div>
                 <div className="border-2 w-[200px] h-10 flex justify-center items-center rounded-2xl font-medium bg-blue-200">
-                    <h1>Faculty Dashboard</h1>
+                    <h1>{title}</h1>
                 </div>
              </div>
                 <div className="flex border-2 gap-[50px] justify-end h-[45px] w-[30%]">

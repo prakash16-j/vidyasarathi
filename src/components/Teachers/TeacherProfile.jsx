@@ -7,7 +7,7 @@ import FacultyNavbar from "./FacultyNavbar";
 let TeacherProfile = () => {
   return (
     <>
-    <FacultyNavbar></FacultyNavbar>
+    <FacultyNavbar title="profile"></FacultyNavbar>
       <section className="  ">
         <div>
           {/* <Student_profilelNavbar /> */}
