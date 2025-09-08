@@ -10,12 +10,13 @@ import FacultyAddedpopup from "./components/Students/FacultyAddedpopup-3";
 import FacultyRemovepopup from "./components/Students/FacultyAddedpopup-4";
 import ExportedSuccesspopup from "./components/Students/ExportedSuccesspopup";
 import RegulationAddedpopup from "./components/Students/RegulationAddedpopup";
+import HelpAndSupport from "./components/Students/HelpAndSupportpopup";
 
 function App() {
   return (
     <>
      
-      {/* <Outlet />   */}
+      <Outlet />  
       {/* <StudentSignUP></StudentSignUP> */}
        {/* Ritesh task on 5-sept */}
       {/* <Latest/>
@@ -25,6 +26,7 @@ function App() {
       <FacultyRemovepopup></FacultyRemovepopup>
       <ExportedSuccesspopup></ExportedSuccesspopup>
       <RegulationAddedpopup></RegulationAddedpopup>
+      <HelpAndSupport></HelpAndSupport>
     </>
   );
 }
