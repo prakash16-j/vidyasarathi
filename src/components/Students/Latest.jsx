@@ -1,53 +1,52 @@
-import { LuCircleDollarSign } from "react-icons/lu";
-import { BsCardHeading } from "react-icons/bs";
-import { TbUserScan } from "react-icons/tb";
-import { LiaFileUploadSolid } from "react-icons/lia";
+import { SlCalender } from "react-icons/sl";
+import { CiBookmarkCheck } from "react-icons/ci";
+import { LuNotebookPen } from "react-icons/lu";
+import { FaClipboardUser } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-let Quickaction = () => {
-  let obj = [
+let Latest = () => {
+  const obj = [
     {
-      icon: <LuCircleDollarSign />,
-      img: "./image.png",
+      icon: <SlCalender />,
       text: (
         <>
           Add Faculty/ <br />
           Remove Faculty
         </>
       ),
-      link: "", // 👈 route added
+      link: "/faculty",
     },
     {
-      icon: <BsCardHeading />,
+      icon: <CiBookmarkCheck />,
       text: (
         <>
           Add Student/ <br />
           Remove Student
         </>
       ),
-      link: "",
+      link: "/student",
     },
     {
-      icon: <TbUserScan />,
+      icon: <LuNotebookPen />,
       text: (
         <>
           View Faculty <br /> & Student
         </>
       ),
-      link: "/admin/view",
+      link: "/view",
     },
     {
-      icon: <LiaFileUploadSolid />,
+      icon: <FaClipboardUser />,
       text: "Add Regulations",
-      link: "/add-regulation",
+      link: "/regulations",
     },
   ];
 
   return (
-    <>
-      <div className="">
+    <section className="border-2 border-solid flex justify-center">
+    <div className="">
         <div className="w-300 bg-white rounded-xl drop-shadow-2xl h-64">
-          <h1 className="h-10 w-50 text-center font-bold">Quick Actions:</h1>
+          <h1 className="h-10 w-50 text-center font-bold">Latest:</h1>
           <br />
           <div className="flex w-300 justify-evenly h-40">
             {obj.map((e, i) => {
@@ -74,8 +73,8 @@ let Quickaction = () => {
           </div>
         </div>
       </div>
-    </>
+      </section>
   );
 };
 
-export default Quickaction;
+export default Latest;

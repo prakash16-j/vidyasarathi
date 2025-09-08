@@ -1,6 +1,6 @@
-import AddRegulation_V from "./components/AddRegulation_V"
-import Admin_Navbar from "./components/Admin_Navbar"
-import Quickaction from "./components/Quick actions"
+import AddRegulation_V from "./AddRegulation_V"
+import Admin_Navbar from "./Admin_Navbar"
+import Quickaction from "./Quick actions"
 
 let Addregulation=()=>{
 

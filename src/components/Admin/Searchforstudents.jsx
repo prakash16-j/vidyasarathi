@@ -1,7 +1,8 @@
 import { IoMdDownload } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
-let SearchForTeacher=()=>{
+let Searchforstudents=()=>{
 let obj=[{
     s1:(<>Select Course <IoMdDownload /></>)
 },
@@ -13,25 +14,31 @@ let obj=[{
 },
 ]
 let obj1=[{
-    s2:"Enter Roll no"
+    s2:"Payment Status"
 },
 {
-s2:"Name"
+s2:"Reg.. Status"
 },
 {
-
-},
-
+    s2:"Verification"
+}
 ]
-
+let obj3=[{
+    s3:"Enter Roll Number"
+},
+{
+    s3:"Name (Auto)"
+},{
+    s3:"Father’s Name"
+}
+]
     return <>
-   
-  <div>
-          
-    <div className=" w-300  left-40 h-110 bg-white rounded-xl drop-shadow-2xl ">
+    <div className=" relative   ">
+        
+    <div className="top-20  w-300  l h-110 bg-white rounded-xl drop-shadow-2xl ">
         <div className="flex justify-between w-285 left-10 absolute   leading-12 ">
          <h1 className="border-2 border-black h-10 font-bold ">
-            Search for Teachers
+            Search for students:
             </h1>
             <h1>
              <input  type="radio" /><label htmlFor="" className="font-bold"> Master List</label>
@@ -44,9 +51,9 @@ s2:"Name"
  <div className="flex justify-evenly gap-10">
  {
     obj.map((e)=>{
-        let{s1,}=e
+        let{s1,s2}=e
         return<>
-        <select className="select rounded-full text-sm" >
+        <select className=" select rounded-full text-sm" >
             <option  className="bg-[#D8E7F5]" value="">{s1}</option>
             <option value=""></option>
             <option value=""></option>
@@ -59,13 +66,13 @@ s2:"Name"
    }
     <h1 className="border-2 bg-[#F3B300] flex rounded-[100px] font-bold items-center justify-center text-[white] w-40">Search <span><CiSearch /></span></h1>
    </div>
-  <br />  <h1 className="font-bold absolute left-10">Specific Search :</h1><br /><br />
+  <br />  <h1 className="font-bold absolute left-10">Apply Filter:</h1><br /><br />
  <div className="flex justify-evenly gap-10">
  {
     obj1.map((e)=>{
         let{s2}=e
         return<>
-        <select className="select rounded-full text-sm w-[13rem]" >
+        <select className="select rounded-full text-sm" >
             <option  className="bg-[#D8E7F5]" value="">{s2}</option>
             <option value=""></option>
             <option value=""></option>
@@ -76,17 +83,33 @@ s2:"Name"
         
     })
    }
-       <h1 className="border-2 bg-[#F3B300] flex rounded-[100px] float-right font-bold items-center justify-center text-[white] w-40">Apply</h1>
-
+    <h1 className="border-2 bg-[#F3B300] flex rounded-[100px] font-bold items-center justify-center text-[white] w-40">Apply</h1>
    </div>
    <br />
-   
- 
+   <h1 className="font-bold absolute left-10">Apply Filter:</h1><br /><br />
+ <div className="flex justify-evenly gap-10">
+ {
+    obj3.map((e)=>{
+        let{s3}=e
+        return<>
+        <select className="select rounded-full text-sm" >
+            <option  className="bg-[#D8E7F5]" value="">{s3}</option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+       
+        </>
+        
+        
+    })
+   }
+   <Link to='/student-table'>    <h1 className="border-2 bg-[#F3B300] flex rounded-[100px] h-10 font-bold items-center justify-center text-[white] w-40">Apply</h1>
+</Link>
+   </div>
     </div>
     
-  </div>
    
-
+    </div>
     </>
 }
-export default SearchForTeacher
+export default Searchforstudents

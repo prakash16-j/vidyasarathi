@@ -1,9 +1,16 @@
-import Admin_StudentSection from "./Admin_StudentSection"
-import Admin_teacherSection from "./Admin_teacherSection"
+import Admin_Footer from "./Admin_Footer";
+import Admin_Navbar from "./Admin_Navbar";
+import Quickaction from "./Quick actions";
+import SearchForTeacher from "./SearchForTeacher";
+import StudentTable from "./StudentTable";
+// Importing icons from popular icon libraries via react-icons
+import { FaDollarSign, FaFolder, FaUserFriends, FaFileUpload } from 'react-icons/fa';
 
-let Teacher_Student_Search =()=> {
+
+
+const Admin_teacherSection = () => {
   return (
-  <section className=" flex flex-col justify-around gap-10 bg-gray-50 items-center  ">
+    <section className=" flex flex-col justify-around gap-10 bg-gray-50 items-center  ">
     <div className="w-full mt-10">
         <Admin_Navbar/>
     </div>
@@ -22,6 +29,8 @@ let Teacher_Student_Search =()=> {
         <Admin_Footer/>
       </div>
     </section>
-  )
-}
-export default Teacher_Student_Search
+  );
+};
+
+
+  export default Admin_teacherSection;

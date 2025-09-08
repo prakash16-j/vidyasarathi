@@ -1,5 +1,5 @@
 import Add_facultyA from "./Add _facultyA"
-import Admin_Navbar from "./Admin_Navbar"
+import Admin_Navbar from "../Admin/Admin_Navbar"
 import Quickaction from "./Quick actions"
 
 let Add_faculty=()=>{
