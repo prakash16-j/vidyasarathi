@@ -8,8 +8,10 @@ function App() {
   return (
     <>
      
-      {/* <Outlet /> 👈 Public pages (Landing, Login, Teacher Login, etc.) */}
+      <Outlet /> 👈 Public pages (Landing, Login, Teacher Login, etc.)
       <StudentSignUP></StudentSignUP>
+      
+      
     </>
   );
 }
