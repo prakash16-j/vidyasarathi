@@ -10,6 +10,7 @@ import FacultyAddedpopup from "./components/Students/FacultyAddedpopup-3";
 import FacultyRemovepopup from "./components/Students/FacultyAddedpopup-4";
 import ExportedSuccesspopup from "./components/Students/ExportedSuccesspopup";
 import RegulationAddedpopup from "./components/Students/RegulationAddedpopup";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <FacultyRemovepopup></FacultyRemovepopup>
       <ExportedSuccesspopup></ExportedSuccesspopup>
       <RegulationAddedpopup></RegulationAddedpopup>
+      <Dashboard></Dashboard>
     </>
   );
 }
