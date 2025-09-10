@@ -17,8 +17,8 @@ function App() {
   return (
     <>
      
-      {/* <Outlet />   */}
-      {/* <StudentSignUP></StudentSignUP> */}
+      <Outlet />  
+       <StudentSignUP></StudentSignUP> 
        {/* Ritesh task on 5-sept */}
       {/* <Latest/> */}
       {/* <Encapsulation></Encapsulation> */}
@@ -29,6 +29,7 @@ function App() {
       <RegulationAddedpopup></RegulationAddedpopup>
       <HelpAndSupport></HelpAndSupport>
       <RequestPopup></RequestPopup>
+      
 
     </>
   );
