@@ -20,7 +20,7 @@ function App() {
   return (
     <>
      
-      {/* <Outlet/>  */}
+      {/* <Outlet />   */}
       {/* <StudentSignUP></StudentSignUP> */}
        {/* Ritesh task on 5-sept */}
       {/* <Latest/> */}
@@ -32,8 +32,8 @@ function App() {
       <ExportedSuccesspopup></ExportedSuccesspopup>
       <RegulationAddedpopup></RegulationAddedpopup>
       <HelpAndSupport></HelpAndSupport>
-      <RequestPopup></RequestPopup> */}
-      <FacultyEditmaterialTable></FacultyEditmaterialTable>
+      <RequestPopup></RequestPopup>
+
     </>
   );
 }
