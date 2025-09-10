@@ -33,6 +33,7 @@ function App() {
       <RegulationAddedpopup></RegulationAddedpopup>
       <HelpAndSupport></HelpAndSupport>
       <RequestPopup></RequestPopup>
+      <FacultyEditmaterialTable></FacultyEditmaterialTable>
 
     </>
   );
