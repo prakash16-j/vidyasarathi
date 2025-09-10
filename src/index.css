@@ -251,6 +251,19 @@ h3 {
   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.15);
   cursor: text;
 }
+.input1-style {
+  /* flex: 0 0 200px; */
+  padding: 10px 16px;
+  background: #DBEAFE;
+ 
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  outline: none;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.15);
+  cursor: text;
+}
 
 /* -------- Buttons -------- */
 .btn1,

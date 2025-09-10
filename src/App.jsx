@@ -10,11 +10,12 @@ function App() {
   return (
     <>
      
-      <Outlet />  
+      {/* <Outlet />   */}
       {/* <StudentSignUP></StudentSignUP> */}
        {/* Ritesh task on 5-sept */}
       {/* <Latest/>
       {/* <Encapsulation></Encapsulation> */}
+      
     </>
   );
 }
