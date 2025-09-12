@@ -16,34 +16,14 @@ const StudentSignUP = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
-
-    // const payload = {
-    //   name: formData.name,
-    //   studentId: formData.studentId,
-    //   email: formData.email,
-    //   branch: formData.branch,
-    //   year: formData.year,
-    //   password: formData.password,
-    // };
-
-    try {
-      const response = await fetch("http://localhost:8080/VidyaSarthi/addStudent", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-      console.log("Server Response:", result);
-      alert("Student registered successfully!");
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Something went wrong. Please try again.");
-    }
+    console.log(formData);
+    await fetch("",{
+      method:"post",
+      "content-type":"application/json",
+      body:JSON.stringify(formData)
+    })
   };
 
   return (

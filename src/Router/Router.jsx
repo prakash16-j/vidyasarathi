@@ -17,7 +17,9 @@ import StudentProfile_adminview from "../components/Admin/StudentProfile_adminvi
 import TeacherLogin from "../components/Teachers/TeacherLogin";
 import TeacherProfile from "../components/Teachers/TeacherProfile";
 import UpdateFacultyProfile from "../components/Teachers/UpdateFacultyProfile";
-import StudentSignUP from "../components/Students/StudentSignUP";
+import LogOutpopup from "../components/Students/LogOutpopup";
+import FacultyAddedpopup from "../components/Students/FacultyAddedpopup-3";
+import FacultyRemovepopup from "../components/Students/FacultyAddedpopup-4";
 
 const routes = createBrowserRouter([
   {
@@ -39,7 +41,11 @@ const routes = createBrowserRouter([
       { path: "teacher-login", element: <TeacherLogin /> },
       { path: "teacher-profile", element: <TeacherProfile /> },
       { path: "updatefacultyprofile", element: <UpdateFacultyProfile/> },
-      { path: "studentSignup", element: <StudentSignUP/> },
+      // from here chennarao did
+      {path:"/admin/view/logoutpopup",element:<LogOutpopup></LogOutpopup>},
+      {path:"/admin/view/facultyaddedpopup",element:<FacultyAddedpopup></FacultyAddedpopup>},
+      {path:"/admin/view/facultyremovepopup",element:<FacultyRemovepopup></FacultyRemovepopup>},
+      {}
     ],
   },
 ]);

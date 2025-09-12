@@ -1,184 +1,160 @@
-// UploadModal.jsx
-import Modal from "react-modal";
-import { Upload } from "lucide-react";
+import React from 'react';
+// We will build a custom modal instead of using a library.
+// Icons are imported from lucide-react for a clean look.
+import { FolderUp, X, ChevronDown } from 'lucide-react';
 
-Modal.setAppElement("#root");
-
+// --- DUMMY DATA ---
+// In a real-world application, this data would likely come from an API.
 const subjectOptions = [
-  "Maths",
-  "Physics",
-  "CS101",
-  "Operating Systems",
-  "Data Structures",
-  "AI",
-  "ML",
-  "DBMS",
-  "Networks",
-  "Cyber Security",
+  'Maths',
+  'Physics',
+  'Computer Science 101',
+  'Operating Systems',
+  'Data Structures & Algorithms',
+  'Artificial Intelligence',
+  'Machine Learning',
+  'Database Management Systems',
+  'Computer Networks',
+  'Cyber Security',
 ];
 
-const conceptOptions = ["Basics", "Advanced", "Case Study", "Problems"];
-
+/**
+ * A functional React component for a file upload modal.
+ * It is styled with Tailwind CSS to match the provided design.
+ *
+ * @param {object} props - The props for the component.
+ * @param {boolean} props.isOpen - Controls if the modal is visible.
+ * @param {Function} props.onClose - Function to call when the modal should be closed.
+ * @param {Function} props.onSubmit - Function to call when the submit button is clicked.
+ * @param {string} props.selectedSemester - The currently selected semester value.
+ * @param {Function} props.setSelectedSemester - Function to update the selected semester.
+ * @param {object} props.selectedSubjects - An object holding the selected subjects by index.
+ * @param {Function} props.handleSubjectChange - Function to handle subject dropdown changes.
+ * @param {Function} props.handleFileChange - Function to handle file input changes.
+ */
 const UploadModal = ({
   isOpen,
   onClose,
-  type,
+  onSubmit,
   selectedSemester,
   setSelectedSemester,
   selectedSubjects,
   handleSubjectChange,
-  handleSubjectFileChange,
-  selectedConcepts,
-  handleConceptChange,
-  eventType,
-  setEventType,
-  eventText,
-  setEventText,
-  onSubmit,
+  handleFileChange,
 }) => {
-  return (
-    <Modal
-      isOpen={isOpen}
-      onRequestClose={onClose}
-      contentLabel="Upload Modal"
-      className="bg-white rounded-2xl shadow-xl p-6 w-[600px] h-auto mx-auto mt-10 outline-none"
-      overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
-    >
-      <h2 className="text-xl font-bold bg-amber-400 text-blue-600 p-2 rounded mb-4 text-center">
-        {`Upload ${type} Here`}
-      </h2>
+  // If the modal is not set to be open, we render nothing.
+  if (!isOpen) {
+    return null;
+  }
 
-      {/* Semester (for PYQ, Notes, QB) */}
-      {(type === "PYQ" || type === "Notes" || type === "QB") && (
-        <div className="mb-6">
-          <label className="block font-medium text-gray-700 mb-2">
+  return (
+    // Modal Overlay: Covers the screen and closes the modal on click.
+    <div
+      className="fixed inset-0 bg-black bg-opacity-70 flex justify-center  items-start z-50 px-4 pt-16 sm:pt-24"
+      onClick={onClose}
+    >
+      {/* Modal Content: The main dialog box. Clicks inside here are stopped from closing the modal. */}
+      <div
+        className="relative bg-white rounded-2xl h-100 shadow-2xl p-8 sm:p-12 w-full max-w-4xl mx-auto outline-none transform transition-all animate-fade-in-down"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* --- MODAL HEADER --- */}
+        <div className="flex items-start justify-between mb-8">
+          <div className="flex items-center gap-4">
+            <h2 className="text-2xl font-bold text-gray-800">
+              Complete your Upload:
+            </h2>
+          </div>
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors sm:static"
+            aria-label="Close modal"
+          >
+            <X size={24} />
+          </button>
+        </div>
+
+
+        {/* --- FORM CONTENT --- */}
+        <div className="grid grid-cols-12 gap-x-8 gap-y-8 items-start">
+          {/* --- SEMESTER SELECTION --- */}
+          <label className="col-span-12 sm:col-span-3 text-md font-medium text-gray-700 sm:text-right sm:pt-5">
             Choose Semester:
           </label>
-          <select
-            value={selectedSemester}
-            onChange={(e) => setSelectedSemester(e.target.value)}
-            className="w-full border-gray-300 p-2 rounded bg-blue-100"
-          >
-            <option value="">-- Choose Semester --</option>
-            <option value="7">7th Semester (2023 - 24 Autumn)</option>
-            <option value="8">8th Semester (2024 - 25 Spring)</option>
-          </select>
-        </div>
-      )}
+          <div className="relative col-span-12 sm:col-span-9">
+            <select
+              value={selectedSemester}
+              onChange={(e) => setSelectedSemester(e.target.value)}
+              className="w-full h-10 p-5 pr-12 border-none rounded-lg bg-slate-100 focus:ring-2 focus:ring-purple-500 outline-none appearance-none"
+            >
+              <option value="">7th Semester (2023 - 24 Autumn)</option>
+              <option value="8">8th Semester (2024 - 25 Spring)</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+              <ChevronDown size={24} />
+            </div>
+          </div>
 
-      {/* Subjects + File Upload (for PYQ, Notes, QB) */}
-      {(type === "PYQ" || type === "Notes" || type === "QB") && (
-        <div className="mb-6">
-          <label className="block font-medium text-gray-700 mb-2">
-            Choose Subjects (Priority Wise) + Upload:
+          {/* --- SUBJECTS & FILE UPLOAD --- */}
+          <label className="col-span-12 sm:col-span-3 text-md font-medium text-gray-700 sm:text-right sm:pt-5">
+            Choose Subjects:
+            <span className="block text-gray-500 font-normal mt-1">(Choose Priority Wise)</span>
           </label>
-          <div className="flex flex-col gap-3">
-            {["A", "B", "C", "D"].map((label, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <select
-                  value={selectedSubjects[index]}
-                  onChange={(e) => handleSubjectChange(index, e.target.value)}
-                  className="border p-2 rounded bg-blue-100 flex-1"
-                >
-                  <option value="">{`${label}. Choose`}</option>
-                  {subjectOptions.map((subject) => (
-                    <option key={subject} value={subject}>
-                      {subject}
-                    </option>
-                  ))}
-                </select>
+          <div className="col-span-12 sm:col-span-9 flex flex-col gap-5 space-y-6 col-gap-10 ">
+            {['A', 'B', 'C', 'D'].map((label, index) => (
+              <div key={index} className="grid grid-cols-12 gap-x-4">
+                {/* Subject Dropdown */}
+                <div className="relative col-span-10">
+                  <select
+                    value={selectedSubjects[index] || ''}
+                    onChange={(e) => handleSubjectChange(index, e.target.value)}
+                    className="w-full h-10 p-5 pr-12 border-none rounded-lg bg-slate-100 focus:ring-2 focus:ring-purple-500 outline-none appearance-none"
+                  >
+                    <option value="">{`${label}. Choose`}</option>
+                    {subjectOptions.map((subject) => (
+                      <option key={subject} value={subject}>
+                        {subject}
+                      </option>
+                    ))}
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                    <ChevronDown size={24} />
+                  </div>
+                </div>
 
-                <input
-                  type="file"
-                  id={`upload-${type}-${index}`}
-                  onChange={(e) =>
-                    handleSubjectFileChange(index, e.target.files[0])
-                  }
-                  className="hidden"
-                />
-                <label
-                  htmlFor={`upload-${type}-${index}`}
-                  className="cursor-pointer p-2 bg-green-500 hover:bg-green-600 text-white rounded-full"
-                >
-                  <Upload size={18} />
-                </label>
+                {/* File Upload Button */}
+                <div className="col-span-2">
+                    <input
+                      type="file"
+                      id={`file-upload-${index}`}
+                      className="hidden"
+                      onChange={(e) => handleFileChange(index, e.target.files[0])}
+                    />
+                    <label
+                      htmlFor={`file-upload-${index}`}
+                      className="cursor-pointer w-full h-full flex items-center justify-center p-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-lg shadow-sm transition-transform transform hover:scale-105"
+                    >
+                      <FolderUp size={24} />
+                    </label>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      )}
-
-      {/* Concepts (for Notes & QB) */}
-      {(type === "Notes" || type === "QB") && (
-        <div className="mb-6">
-          <label className="block font-medium text-gray-700 mb-2">
-            Choose Concept:
-          </label>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            {["A", "B", "C"].map((label, index) => (
-              <select
-                key={label}
-                value={selectedConcepts[index]}
-                onChange={(e) => handleConceptChange(index, e.target.value)}
-                className="border p-2 rounded bg-blue-100"
-              >
-                <option value="">{`${label}. Choose`}</option>
-                {conceptOptions.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
-                  </option>
-                ))}
-              </select>
-            ))}
-          </div>
+<br />
+        {/* --- SUBMIT BUTTON --- */}
+        <div className="flex justify-center mt-12">
+          <button
+            onClick={onSubmit}
+            className="px-12 py-4 bg-yellow-500 text-gray-900  text-white-500 font-bold text-lg rounded-lg shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition-all transform hover:scale-105"
+          >
+            Submit Now
+          </button>
         </div>
-      )}
-
-      {/* Events (special case) */}
-      {type === "Events" && (
-        <>
-          <div className="mb-6">
-            <label className="block font-medium text-gray-700 mb-2">
-              Choose News/Event Type:
-            </label>
-            <select
-              value={eventType}
-              onChange={(e) => setEventType(e.target.value)}
-              className="w-full border p-2 rounded bg-blue-100"
-            >
-              <option value="">-- Select --</option>
-              <option value="Announcement">Announcement</option>
-              <option value="Workshop">Workshop</option>
-              <option value="Seminar">Seminar</option>
-              <option value="Exam">Exam</option>
-            </select>
-          </div>
-
-          <div className="mb-6">
-            <label className="block font-medium text-gray-700 mb-2">
-              Enter the text:
-            </label>
-            <textarea
-              value={eventText}
-              onChange={(e) => setEventText(e.target.value)}
-              placeholder="Describe the event..."
-              className="w-full border p-2 rounded bg-blue-100"
-            />
-          </div>
-        </>
-      )}
-
-      {/* Submit button */}
-      <div className="flex justify-center">
-        <button
-          onClick={onSubmit}
-          className="px-6 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-500 font-semibold"
-        >
-          Submit Now
-        </button>
       </div>
-    </Modal>
+    </div>
   );
 };
 
 export default UploadModal;
+

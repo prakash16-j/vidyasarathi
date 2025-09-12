@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function Add_facultyA() {
+  let navgite=useNavigate()
   const [faculty, setFaculty] = useState({
     name: "",
     id: "",
@@ -23,6 +25,11 @@ function Add_facultyA() {
     // TODO: Add API or DB logic
     setFaculty({ name: "", id: "", email: "", password: "" });
   };
+  let handlesubmit=(e)=>{
+  e.preventDefault();
+  console.log(faculty);
+  navgite("/admin/view/facultyaddedpopup") 
+}
 
   // Remove faculty submit
   const handleRemoveFaculty = (e) => {
@@ -31,6 +38,11 @@ function Add_facultyA() {
     // TODO: Add API or DB logic
     setRemoveId("");
   };
+  let handleremove=(e)=>{
+  e.preventDefault();
+  console.log(removeId);
+  navgite("/admin/view/facultyremovepopup") 
+}
 
   return (
     <div className="flex flex-col items-center justify-self-center-safe h-[110vh] gap-1.5 shadow-lg w-full bg-gray-100 m-1.5">
@@ -83,10 +95,7 @@ function Add_facultyA() {
                 required
               />
               <div className="flex w-75 justify-center">
-                <button
-                  type="submit"
-                  className="bg-yellow-500 rounded-lg flex items-center justify-center text-white w-[200px] h-[40px]"
-                >
+                <button onClick={handlesubmit} className="bg-yellow-500 rounded-lg flex items-center justify-center text-white w-[200px] h-[40px]">
                   Add
                 </button>
               </div>
@@ -112,9 +121,8 @@ function Add_facultyA() {
               />
               <div className="flex items-center justify-center w-full">
                 <button
-                  type="submit"
-                  className="bg-yellow-500 text-white px-7 py-2 rounded-lg w-[200px] h-[40px]"
-                >
+                  onClick={handleremove}
+                  className="bg-yellow-500 text-white px-7 py-2 rounded-lg w-[200px] h-[40px]">
                   Remove
                 </button>
               </div>
@@ -127,9 +135,9 @@ function Add_facultyA() {
       <br />
       <div className="p-20 h-30">
         <div className="w-[240px] shadow-lg bg-white drop-shadow-2xl rounded-[12px] flex flex-col justify-around items-center h-[100px]">
-          <button className="mt-6 bg-yellow-500 hover:bg-yellow-600 w-33 text-white px-8 py-3 rounded-md font-semibold shadow">
+       <Link to="">  <button  className="mt-6 bg-yellow-500 hover:bg-yellow-600 w-33 text-white px-8 py-3 rounded-md font-semibold shadow">
             View <br /> Faculty List
-          </button>
+          </button></Link> 
         </div>
       </div>
     </div>
