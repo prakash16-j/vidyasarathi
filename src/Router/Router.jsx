@@ -17,6 +17,7 @@ import StudentProfile_adminview from "../components/Admin/StudentProfile_adminvi
 import TeacherLogin from "../components/Teachers/TeacherLogin";
 import TeacherProfile from "../components/Teachers/TeacherProfile";
 import UpdateFacultyProfile from "../components/Teachers/UpdateFacultyProfile";
+import StudentSignUP from "../components/Students/StudentSignUP";
 
 const routes = createBrowserRouter([
   {
@@ -38,6 +39,7 @@ const routes = createBrowserRouter([
       { path: "teacher-login", element: <TeacherLogin /> },
       { path: "teacher-profile", element: <TeacherProfile /> },
       { path: "updatefacultyprofile", element: <UpdateFacultyProfile/> },
+      { path: "studentSignup", element: <StudentSignUP/> },
     ],
   },
 ]);
