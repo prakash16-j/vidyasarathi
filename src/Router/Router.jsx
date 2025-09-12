@@ -20,6 +20,7 @@ import UpdateFacultyProfile from "../components/Teachers/UpdateFacultyProfile";
 import LogOutpopup from "../components/Students/LogOutpopup";
 import FacultyAddedpopup from "../components/Students/FacultyAddedpopup-3";
 import FacultyRemovepopup from "../components/Students/FacultyAddedpopup-4";
+import StudentSignUP from "../components/Students/StudentSignUP";
 
 const routes = createBrowserRouter([
   {
@@ -41,6 +42,7 @@ const routes = createBrowserRouter([
       { path: "teacher-login", element: <TeacherLogin /> },
       { path: "teacher-profile", element: <TeacherProfile /> },
       { path: "updatefacultyprofile", element: <UpdateFacultyProfile/> },
+      { path: "studentSignup", element: <StudentSignUP/> },
       // from here chennarao did
       {path:"/admin/view/logoutpopup",element:<LogOutpopup></LogOutpopup>},
       {path:"/admin/view/facultyaddedpopup",element:<FacultyAddedpopup></FacultyAddedpopup>},

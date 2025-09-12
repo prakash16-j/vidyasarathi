@@ -21,7 +21,9 @@ let Landing =()=>{
          <Link to="/login">
                 <button id="login-btn">LOGIN</button>
               </Link>
+   <Link to="/studentSignup">
          <button className="signup-btn rounded-[30px]">SIGN UP</button>
+   </Link>
          </div>
         </nav>
         </div>
