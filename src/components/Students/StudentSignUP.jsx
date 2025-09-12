@@ -31,7 +31,7 @@ const StudentSignUP = () => {
       <StudentNavbar />
       <br />
       <section className="flex justify-center">
-        <div className="drop-shadow-2xl bg-white rounded-2xl w-[30rem] h-100" style={{ paddingLeft: "28px", paddingTop: "20px" }}>
+        <div className="drop-shadow-2xl bg-white rounded-2xl w-[30rem] h-150" style={{ paddingLeft: "28px", paddingTop: "20px" }}>
           <form onSubmit={handleSubmit} className="rounded-2xl" style={{ paddingLeft: "1px" }}>
             <h1 className="text-2xl font-bold mb-1">SignUp</h1><br />
             <hr className="border-gray-400 w-40 mb-3" />
