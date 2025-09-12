@@ -32,8 +32,8 @@ function App() {
       <ExportedSuccesspopup></ExportedSuccesspopup>
       <RegulationAddedpopup></RegulationAddedpopup>
       <HelpAndSupport></HelpAndSupport>
-      <RequestPopup></RequestPopup> */}
-      <FacultyEditmaterialTable></FacultyEditmaterialTable>
+      <RequestPopup></RequestPopup>
+      <FacultyEditmaterialTable></FacultyEditmaterialTable> */}
 
     </>
   );
