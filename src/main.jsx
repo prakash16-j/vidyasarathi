@@ -5,9 +5,9 @@ import App from './App'
 import { RouterProvider } from 'react-router-dom'
 import routes from './Router/Router'
 import FindmaterialPop from './components/Students/FindmaterialPop'
-import UpdateStudentProfile from './components/Students/UpdateStudentProfile'
-import UploadCards from './components/Teachers/UploadCards'
 import Dashboard from './components/Dashboard'
+import CompleteUpload from './components/Teachers/CompleteUpload'
+import UploadModule from './components/Teachers/UploadModule'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

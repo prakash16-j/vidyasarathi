@@ -13,9 +13,14 @@ import StudentNavbar from "./StudentNavbar";
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
     console.log(formData);
+    await fetch("",{
+      method:"post",
+      "content-type":"application/json",
+      body:JSON.stringify(formData)
+    })
   };
 
   return <>
