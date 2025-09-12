@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LogOutpopup = () => {
   return (
@@ -15,9 +16,9 @@ const LogOutpopup = () => {
         <p className="text-gray-600 mt-2" style={{padding:"10px", paddingBottom:"18px"}}>Do you want to logout</p>
 
         {/* Logout Button */}
-        <button className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all w-[7rem]">
+      <Link to="/">  <button className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all w-[7rem]">
           Logout
-        </button>
+        </button></Link>
         </div>
       </div>
     </div>

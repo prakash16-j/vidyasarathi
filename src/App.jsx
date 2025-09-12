@@ -17,12 +17,12 @@ function App() {
   return (
     <>
      
-      {/* <Outlet />   */}
+      <Outlet />  
       {/* <StudentSignUP></StudentSignUP> */}
        {/* Ritesh task on 5-sept */}
       {/* <Latest/> */}
       {/* <Encapsulation></Encapsulation> */}
-      <LogOutpopup></LogOutpopup>
+      {/* <LogOutpopup></LogOutpopup> */}
       <FacultyAddedpopup></FacultyAddedpopup>
       <FacultyRemovepopup></FacultyRemovepopup>
       <ExportedSuccesspopup></ExportedSuccesspopup>
