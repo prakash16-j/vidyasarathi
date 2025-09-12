@@ -39,7 +39,7 @@ const StudentSignUP = () => {
 
             {/* Name */}
             <label className="block mb-2 font-semibold">Name</label>
-            <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" className="w-[19rem] h-[2rem] mb-4 border rounded-lg bg-blue-100 focus:outline-none" />
+            <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" className="w-[19rem] h-[2rem] mb-4 border rounded-lg bg-blue-100  focus:outline-none" />
 
             {/* Student ID */}
             <label className="block mb-2 font-semibold">Student ID</label>
