@@ -105,3 +105,5 @@ import StudentNavbar from "./StudentNavbar";
   </>
 }
 export default StudentSignUP
+
+
