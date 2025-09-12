@@ -24,7 +24,7 @@ function App() {
       {/* <StudentSignUP></StudentSignUP> */}
        {/* Ritesh task on 5-sept */}
       {/* <Latest/> */}
-      <FindmaterialPop></FindmaterialPop>
+      {/* <FindmaterialPop></FindmaterialPop>
       <Encapsulation></Encapsulation>
       <LogOutpopup></LogOutpopup>
       <FacultyAddedpopup></FacultyAddedpopup>
@@ -32,7 +32,7 @@ function App() {
       <ExportedSuccesspopup></ExportedSuccesspopup>
       <RegulationAddedpopup></RegulationAddedpopup>
       <HelpAndSupport></HelpAndSupport>
-      <RequestPopup></RequestPopup>
+      <RequestPopup></RequestPopup> */}
       <FacultyEditmaterialTable></FacultyEditmaterialTable>
 
     </>
