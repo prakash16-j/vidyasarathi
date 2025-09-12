@@ -12,6 +12,9 @@ import UploadModule from './components/Teachers/UploadModule'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={routes}/>
-    <FindmaterialPop></FindmaterialPop>
+    {/* <FindmaterialPop></FindmaterialPop> */}
+    {/* <UpdateStudentProfile></UpdateStudentProfile> */}
+    {/* <UploadCards></UploadCards> */}
+    {/* <Dashboard></Dashboard> */}
   </StrictMode>,
 )

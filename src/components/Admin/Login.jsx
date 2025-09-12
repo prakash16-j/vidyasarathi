@@ -35,7 +35,7 @@ let Login = () => {
     // --- Option 2: API authentication (uncomment if you have API) ---
     /*
     try {
-      let response = await fetch("http://localhost:5000/admin/login", {
+      let response = await fetch("http://localhost:8080/VidyaSarthi/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(admin),
