@@ -8,6 +8,7 @@ import FindmaterialPop from './components/Students/FindmaterialPop'
 import Dashboard from './components/Dashboard'
 import CompleteUpload from './components/Teachers/CompleteUpload'
 import UploadModule from './components/Teachers/UploadModule'
+import StudentSignUP from './components/Students/StudentSignUP'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -16,5 +17,6 @@ createRoot(document.getElementById('root')).render(
     {/* <UpdateStudentProfile></UpdateStudentProfile> */}
     {/* <UploadCards></UploadCards> */}
     {/* <Dashboard></Dashboard> */}
+   
   </StrictMode>,
 )
