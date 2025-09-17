@@ -52,18 +52,17 @@ function Add_facultyA() {
           {/* Add Faculty */}
           <form
             onSubmit={handleAddFaculty}
-            className="w-100 shadow-lg bg-white drop-shadow-2xl rounded-[12px] flex flex-col h-[30rem] p-6"
+            className="w-100 shadow-lg bg-white drop-shadow-2xl rounded-[12px] flex flex-col h-[27rem] p-6"
           >
-            <h1 className="font-medium text-4xs mb-6 ">Add Faculty:</h1>
-            <hr />
+            <h1 className="font-bold text-xl "style={{marginTop:["px"],marginLeft:["60px"],paddingTop:["40px"],paddingBottom:["15px"]}}>Add Faculty:</h1>
 
-            <div className="flex flex-col gap-6 pl-10 items-center h-100 justify-around ">
+            <div className="flex flex-col gap-6 pl-10 items-center h-200 "style={{marginTop:["1px"]}}>
               <input
                 type="text"
                 name="name"
                 value={faculty.name}
                 onChange={handleFacultyChange}
-                className="h-[45px] w-[300px] rounded-[12px] placeholder-black bg-blue-100 shadow-lg drop-shadow-2xl px-3"
+                className="h-[45px] w-[300px] rounded-[12px] placeholder-black bg-blue-100 shadow-lg drop-shadow-lg px-3"
                 placeholder="Enter Faculty Name"
                 required
               />
@@ -72,7 +71,7 @@ function Add_facultyA() {
                 name="id"
                 value={faculty.id}
                 onChange={handleFacultyChange}
-                className="h-[45px] w-[300px] rounded-[12px] placeholder-black bg-blue-100 shadow-lg drop-shadow-2xl px-3"
+                className="h-[45px] w-[300px] rounded-[12px] placeholder-black bg-blue-100 shadow-lg drop-shadow-lg px-3"
                 placeholder="Enter Faculty ID"
                 required
               />
@@ -81,7 +80,7 @@ function Add_facultyA() {
                 name="email"
                 value={faculty.email}
                 onChange={handleFacultyChange}
-                className="h-[45px] w-[300px] rounded-[12px] placeholder-black bg-blue-100 shadow-lg drop-shadow-2xl px-3"
+                className="h-[45px] w-[300px] rounded-[12px] placeholder-black bg-blue-100 shadow-lg drop-shadow-lg px-3"
                 placeholder="Enter Faculty Email"
                 required
               />
@@ -90,7 +89,7 @@ function Add_facultyA() {
                 name="password"
                 value={faculty.password}
                 onChange={handleFacultyChange}
-                className="h-[45px] w-[300px] rounded-[12px] placeholder-black bg-blue-100 shadow-lg drop-shadow-2xl px-3"
+                className="h-[45px] w-[300px] rounded-[12px] placeholder-black bg-blue-100 shadow-lg drop-shadow-lg px-3"
                 placeholder="Enter Password"
                 required
               />
@@ -105,17 +104,16 @@ function Add_facultyA() {
           {/* Remove Faculty */}
           <form
             onSubmit={handleRemoveFaculty}
-            className="w-[380px] shadow-lg bg-white drop-shadow-2xl rounded-[12px] flex flex-col gap-4  h-[20rem] p-6"
+            className="w-[380px] shadow-lg bg-white drop-shadow-2xl rounded-[12px] flex flex-col gap-4  h-[20rem]"style={{padding:["75px"]}}
           >
-            <h1 className="font-medium text-4xs mb-6">Remove Faculty:</h1>
-            <hr />
+            <h1 className="font-bold text-xl "style={{marginLeft:["10px"]}}>Remove Faculty:</h1>
 
             <div className="flex flex-col items-center gap-6">
               <input
                 type="text"
                 value={removeId}
                 onChange={(e) => setRemoveId(e.target.value)}
-                className="h-[45px] w-[300px] rounded-[12px] placeholder-black bg-blue-100 shadow-lg border drop-shadow-2xl px-3"
+                className="h-[45px] w-[300px] rounded-[12px] placeholder-black bg-blue-100 shadow-lg border drop-shadow-lg px-3"
                 placeholder="Enter Faculty ID"
                 required
               />

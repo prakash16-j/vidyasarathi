@@ -19,7 +19,7 @@ let FacultyEditMaterial=()=>{
     <FacultyNavbar></FacultyNavbar>
     <section className="h-125 ">
         <section className=" flex justify-center  items-center h-70">
-            <h1 className=" h-55 rounded-2xl flex flex-col gap-2 items-center justify-center drop-shadow-2xl rounded-2xl bg-[white] w-55">
+            <h1 className=" h-55  flex flex-col gap-2 items-center justify-center drop-shadow-2xl rounded-2xl bg-[white] w-55">
                 <h1 className="font-bold">Edit Material</h1>
                 <input type="text " name="material" placeholder="  Enter Material Id" className=" font-semibold w-40 bg-blue-100 px-4 py-2 h-10 rounded-lg" value={material} onChange={handlechange} id="" />
                 <button className="border-2 w-20 rounded-lg  text-white bg-[#F3B300]">Edit</button>
