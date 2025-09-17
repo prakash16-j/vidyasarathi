@@ -5,10 +5,10 @@ let UpdateFacultyProfile = () => {
   const [formData, setFormData] = useState({
     image: "",
     address: "",
-    branch: "",
+    facultyId: "",
     subject: "",
     designation: "",
-    password: "",
+    phone: "",
   });
 
   // handle change
@@ -22,9 +22,17 @@ let UpdateFacultyProfile = () => {
   };
 
   // handle submit
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async(e) => {
+      e.preventDefault();
+    let reso=await fetch("http://localhost:8080/VidyaSarthi/updateFaculty",{
+        method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+  
     console.log("Form Data:", formData);
+    console.log(reso);
+    
   };
 
   return (
@@ -126,9 +134,9 @@ let UpdateFacultyProfile = () => {
 
             <input
               type="text"
-              name="branch"
-              placeholder="   Enter Branch"
-              value={formData.branch}
+              name="facultyId"
+              placeholder="   Enter facultyId"
+              value={formData.facultyId}
               onChange={handleChange}
               className="w-80 input1-style bg-blue-100 px-4 py-2 h-10 rounded-lg"
             />
@@ -152,10 +160,10 @@ let UpdateFacultyProfile = () => {
             />
 
             <input
-              type="password"
-              name="password"
-              placeholder="Enter Password"
-              value={formData.password}
+              type="phone"
+              name="phone"
+              placeholder="Enter phone"
+              value={formData.phome}
               onChange={handleChange}
               className="w-80 input1-style bg-blue-100 px-4 py-2 h-10 rounded-lg"/>
             <button
