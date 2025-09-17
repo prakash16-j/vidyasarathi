@@ -1,6 +1,6 @@
 
 
-import { Outlet} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 // import SignUp from "./components/Students/StudentSignUP";
 // import StudentSignUP from "./components/Students/StudentSignUP";
 // import Latest from "./components/Students/Latest";
