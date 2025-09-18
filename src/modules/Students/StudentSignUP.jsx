@@ -19,11 +19,13 @@ const StudentSignUP = () => {
   const handleSubmit =async (e) => {
     e.preventDefault();
     console.log(formData);
-    await fetch("",{
+    let std1=await fetch("http://localhost:8080/VidyaSarthi/signUp",{
       method:"post",
-      "content-type":"application/json",
+      headers:{"content-type":"application/json"},
       body:JSON.stringify(formData)
     })
+  console.log(std1);
+  
   };
 
   return (
