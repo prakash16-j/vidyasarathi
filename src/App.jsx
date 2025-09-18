@@ -1,10 +1,6 @@
 
 
-<<<<<<< HEAD
-import { Outlet} from "react-router-dom";
-=======
 import { Outlet } from "react-router-dom";
->>>>>>> a543590f0ba6c454c96eb617d8ccefc27f839155
 // import SignUp from "./components/Students/StudentSignUP";
 // import StudentSignUP from "./components/Students/StudentSignUP";
 // import Latest from "./components/Students/Latest";

@@ -164,8 +164,8 @@
    width: 350px;
 }
 
-/* -------- Admin Login -------- */
-.admin-login {
+/* /* -------- Admin Login -------- */
+/* .admin-login {
   background-image: url('../public/Books.png');
   width: 80%;
   height: 80vh;
@@ -187,7 +187,7 @@
   width: 350px;
   color: black;
   
-}
+} */ */
 
 /* -------- Radio Buttons -------- */
 .radio-label1 input[type="radio"] {
