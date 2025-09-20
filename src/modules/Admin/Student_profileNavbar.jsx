@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import logo from "../../assets/logo.png"
 let Student_profilelNavbar = ()=>{
      return(<>
@@ -14,7 +15,10 @@ let Student_profilelNavbar = ()=>{
                  </div>
                     <div className="flex border-2 gap-[50px] justify-end h-[45px] w-[30%]">
                         <h1 className="text-[22px]">Hepl&Support</h1>
-                        <button className="bg-amber-300 rounded-[10px] p-[10px] w-[150px]">Logout</button>
+                       <NavLink to={"/"}>
+
+                        <button className="bg-amber-400 text-white rounded-[30px] w-[100px] h-[30px]">Logout</button>
+                       </NavLink>
                     </div>
                 </header>
         

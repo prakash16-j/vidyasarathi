@@ -33,9 +33,9 @@ const StudentTable = () => {
 
   return ( <>
  <section className=" flex flex-col justify-around gap-[5rem] h-[130vh] bg-gray-50 items-center">
-        <div className="w-full p-[30px]">
+        {/* <div className="w-full p-[30px]">
         <Admin_Navbar/>
-    </div>
+    </div> */}
     <div className="top-[150px] border-solid mt-[200px] border-amber-200">
         <Quickaction/>
     </div>

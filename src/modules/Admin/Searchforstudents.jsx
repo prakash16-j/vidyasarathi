@@ -103,7 +103,7 @@ let obj3=[{
         
     })
    }
-   <Link to='/student-table'>    <h1 className="border-2 bg-[#F3B300] flex rounded-[100px] h-10 font-bold items-center justify-center text-[white] w-40">Apply</h1>
+   <Link to='/admin/student-table'>    <h1 className="border-2 bg-[#F3B300] flex rounded-[100px] h-10 font-bold items-center justify-center text-[white] w-40">Apply</h1>
 </Link>
    </div>
     </div>

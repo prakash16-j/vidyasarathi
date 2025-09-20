@@ -15,7 +15,7 @@ let Quickaction = () => {
           Remove Faculty
         </>
       ),
-      link: "/add-faculty", 
+      link: "/admin/add-faculty", 
     },
     {
       icon: <BsCardHeading />,
@@ -25,7 +25,7 @@ let Quickaction = () => {
           Remove Student
         </>
       ),
-      link: "/add-students",
+      link: "/admin/add-students",
     },
     {
       icon: <TbUserScan />,
@@ -34,12 +34,12 @@ let Quickaction = () => {
           View Faculty <br /> & Student
         </>
       ),
-      link: "/admin-students",
+      link: "/admin/admin-students",
     },
     {
       icon: <LiaFileUploadSolid />,
       text: "Add Regulations",
-      link: "/add-regulation",
+      link: "/admin/add-regulation",
     },
   ];
 

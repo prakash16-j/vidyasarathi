@@ -7,9 +7,9 @@ let Addregulation=()=>{
     return <>
 
     <section className=" mt-[150px]  h-150">
-      <div className="h-[7rem] ">
+      {/* <div className="h-[7rem] ">
     <Admin_Navbar title="Add Regulation"></Admin_Navbar>
-    </div> 
+    </div>  */}
     <div className="h-[20rem] flex  justify-center ">
     <Quickaction></Quickaction>
     </div>

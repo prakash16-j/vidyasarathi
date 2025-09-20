@@ -1,7 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../auth/AuthContext";
+ // adjust path if needed
 
 const LogOutpopup = ({ isOpen, onClose }) => {
-  if (!isOpen) return null; // don’t render unless open
+  const navigate = useNavigate();
+  const { logout } = useAuth(); // assuming you have a logout function
+
+  if (!isOpen) return null;
+
+  const handleLogout = () => {
+    logout(); // clear user context
+    navigate("/login"); // redirect to login page
+  };
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
@@ -26,7 +37,10 @@ const LogOutpopup = ({ isOpen, onClose }) => {
           </p>
 
           {/* Logout Button */}
-          <button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all w-[7rem]">
+          <button
+            onClick={handleLogout}
+            className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all w-[7rem]"
+          >
             Logout
           </button>
         </div>

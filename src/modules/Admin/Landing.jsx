@@ -5,7 +5,7 @@ let Landing =()=>{
     return(<>
    
     <section className="section border-3 " >
-        {/* write your html here add css in index.css */}
+      
         <div className="landing-container">
             {/* Navbar */}
         <nav className="navbar">
@@ -22,7 +22,7 @@ let Landing =()=>{
                 <button id="login-btn">LOGIN</button>
               </Link>
    <Link to="/studentSignup">
-         <button className="signup-btn rounded-[30px]">SIGN UP</button>
+         <button className="signup-btn  rounded-[30px]">SIGN UP</button>
    </Link>
          </div>
         </nav>
