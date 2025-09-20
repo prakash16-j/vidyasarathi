@@ -1,6 +1,7 @@
+import Quickaction from "../../../../vidyasarathi/src/components/Admin/Quick actions";
 import Admin_Footer from "./Admin_Footer";
 import Admin_Navbar from "./Admin_Navbar";
-import Quickaction from "./Quick actions";
+// import Quickaction from "./Quick actions";
 import Searchforstudents from "./Searchforstudents";
 import SearchForTeacher from "./SearchForTeacher";
 
@@ -13,7 +14,7 @@ const Admin_ViewPage = () => {
     <div className="w-full mt-10">
         <Admin_Navbar title="Global Admin"/>
     </div>
-    <div className="top-[150px] border-solid mt-[200px] border-amber-200">
+    <div className="  h-50 w-240  ">
         <Quickaction />
     </div>
      {/* <div className="flex items-center   justify-center">

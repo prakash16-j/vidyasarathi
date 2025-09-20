@@ -1,51 +1,47 @@
-let UploadModule = () => {
+import React from "react";
+
+const UploadModule = ({ onClose }) => {
   return (
-    <>
-    <form action="">
+    <form>
       <div className="flex flex-col gap-10 justify-center items-center">
-        {/* find pyqs */}
         <section className="w-200 flex flex-col">
-          <h2 className="border-[red] flex flex-col drop-shadow-2xl bg-[white] rounded justify-center items-center">
-            <main className="border-2 flex items-center justify-center ml-20">
-              <h2 className="w-30"></h2>
-              <h1 className="h-65 w-200 flex flex-col gap-3 justify-center">
-                <h2 className="text-2xl font-bold mb-6">Complete your Upload:</h2>
+          <div className="relative bg-white rounded-xl shadow-2xl p-8">
+            {/* --- CLOSE BUTTON --- */}
+            <button
+              type="button"
+              onClick={onClose} // <-- This closes the modal
+              className="absolute top-4 right-4 p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors"
+            >
+              ×
+            </button>
 
-                {/* Choose Material Type */}
-                 <div className="mb-4 flex items-center w-200">
-                  <label className="font-medium w-50">Upload Document</label> 
-                  <select className="w-100 h-11 bg-blue-100 border border-gray-100 rounded-lg shadow-lg drop-shadow-2xl p1-4">
-                    <input type="file" />
-                    <option className="w-full h-30 drop">Upload from Local</option>
-                  </select>
-                </div>
+            {/* --- MODAL HEADER --- */}
+            <h2 className="text-2xl font-bold mb-6 text-center">
+              Complete your Upload:
+            </h2>
 
-                {/* Enter The Text (changed to input) */}
-                {/* <div className="mb-4 flex items-center w-200">
-                  <label className="font-medium w-50">Enter The Text:</label>
-                   <select className="w-100 h-11 bg-blue-100 border border-gray-100 rounded-lg shadow-lg drop-shadow-2xl p1-4">
-                    <option className="w-full h-30 drop">Describe the event</option>
-                    </select> */}
-                  {/* <input
-                    type="text"
-                    placeholder="Describe the event"
-                    className="w-100 h-11 bg-blue-100 border border-gray-100 rounded-lg shadow-lg drop-shadow-2xl p-4"
-                  /> */}
-                {/* </div> */}
+            {/* --- Upload Document --- */}
+            <div className="mb-4 flex items-center gap-4">
+              <label className="font-medium w-40">Upload Document:</label>
+              <select className="w-60 h-11 bg-blue-100 border border-gray-100 rounded-lg shadow-lg p-4">
+                <option>Upload from Local</option>
+                <option>Upload from Drive</option>
+              </select>
+            </div>
 
-                {/* Submit Button */}
-                <div className="flex justify-center">
-                  <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold w-40 h-10 rounded-md">
-                    Upload
-                  </button>
-                </div>
-              </h1>
-            </main>
-          </h2>
+            {/* --- Submit Button --- */}
+            <div className="flex justify-center mt-6">
+              <button
+                type="submit"
+                className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold w-40 h-10 rounded-md"
+              >
+                Upload
+              </button>
+            </div>
+          </div>
         </section>
       </div>
-      </form>
-    </>
+    </form>
   );
 };
 

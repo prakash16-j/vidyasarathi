@@ -1,6 +1,7 @@
+import Quickaction from "../../../../vidyasarathi/src/components/Admin/Quick actions"
 import Admin_Footer from "./Admin_Footer"
 import Admin_Navbar from "./Admin_Navbar"
-import Quickaction from "./Quick actions"
+// import Quickaction from "./Quick actions"
 import Searchforstudents from "./Searchforstudents"
 import SearchForTeacher from "./SearchForTeacher"
 import StudentTable2 from "./StudentTable2"

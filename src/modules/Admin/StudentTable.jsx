@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Admin_Navbar from "./Admin_Navbar";
-import Quickaction from "./Quick actions";
+// import Quickaction from "./Quick actions";
 import Admin_Footer from "./Admin_Footer";
+import Quickaction from "../../../../vidyasarathi/src/components/Admin/Quick actions";
 
 const StudentTable = () => {
   const students = [

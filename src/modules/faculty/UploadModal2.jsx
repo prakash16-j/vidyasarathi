@@ -1,21 +1,6 @@
 import React from 'react';
-// We will build a custom modal instead of using a library.
-// Icons are imported from lucide-react for a clean look.
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, X } from 'lucide-react';
 
-/**
- * A functional React component for an event creation modal.
- * It is styled with Tailwind CSS to match the provided design.
- *
- * @param {object} props - The props for the component.
- * @param {boolean} props.isOpen - Controls if the modal is visible.
- * @param {Function} props.onClose - Function to call when the modal should be closed.
- * @param {Function} props.onSubmit - Function to call when the submit button is clicked.
- * @param {string} props.eventType - The currently selected event type.
- * @param {Function} props.setEventType - Function to update the event type.
- * @param {string} props.eventText - The text for the event description.
- * @param {Function} props.setEventText - Function to update the event description text.
- */
 const UploadModal2 = ({
   isOpen,
   onClose,
@@ -25,22 +10,26 @@ const UploadModal2 = ({
   eventText,
   setEventText,
 }) => {
-  // If the modal is not set to be open, we render nothing.
-  if (!isOpen) {
-    return null;
-  }
+  if (!isOpen) return null;
 
   return (
-    // Modal Overlay: Covers the screen and closes the modal on click.
     <div
       className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-start z-50 px-4 pt-32"
       onClick={onClose}
     >
-      {/* Modal Content: The main dialog box. Clicks inside here are stopped from closing the modal. */}
       <div
         className="relative bg-white rounded-2xl shadow-2xl p-8 sm:p-12 w-full max-w-2xl mx-auto outline-none"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* --- CLOSE BUTTON --- */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors"
+          aria-label="Close modal"
+        >
+          <X size={24} />
+        </button>
+
         {/* --- MODAL HEADER --- */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-gray-800">
@@ -50,7 +39,6 @@ const UploadModal2 = ({
 
         {/* --- FORM CONTENT --- */}
         <div className="grid grid-cols-12 gap-x-6 gap-y-8 items-center">
-          {/* --- EVENT TYPE SELECTION --- */}
           <label className="col-span-12 sm:col-span-4 text-md font-medium text-gray-700 sm:text-right">
             Choose News/Event type:
           </label>
@@ -69,7 +57,6 @@ const UploadModal2 = ({
             </div>
           </div>
 
-          {/* --- EVENT TEXT INPUT --- */}
           <label className="col-span-12 sm:col-span-4 text-md font-medium text-gray-700 sm:text-right">
             Enter the text:
           </label>

@@ -1,81 +1,56 @@
-import { LuCircleDollarSign } from "react-icons/lu";
-import { BsCardHeading } from "react-icons/bs";
-import { TbUserScan } from "react-icons/tb";
-import { LiaFileUploadSolid } from "react-icons/lia";
-import { Link } from "react-router-dom";
+// import { LuCircleDollarSign } from "react-icons/lu";
+// import { BsCardHeading } from "react-icons/bs";
+// import { TbUserScan } from "react-icons/tb";
+// import { LiaFileUploadSolid } from "react-icons/lia";
+// import { Link } from "react-router-dom";
 
-let Quickaction = () => {
-  let obj = [
-    {
-      icon: <LuCircleDollarSign />,
-      img: "./image.png",
-      text: (
-        <>
-          Add Faculty/ <br />
-          Remove Faculty
-        </>
-      ),
-      link: "/add-faculty", 
-    },
-    {
-      icon: <BsCardHeading />,
-      text: (
-        <>
-          Add Student/ <br />
-          Remove Student
-        </>
-      ),
-      link: "/add-students",
-    },
-    {
-      icon: <TbUserScan />,
-      text: (
-        <>
-          View Faculty <br /> & Student
-        </>
-      ),
-      link: "/admin-students",
-    },
-    {
-      icon: <LiaFileUploadSolid />,
-      text: "Add Regulations",
-      link: "/add-regulation",
-    },
-  ];
+// let Quickaction = () => {
+//   let obj = [
+//     {
+//       icon: <LuCircleDollarSign />,
+//       text: <>Add Faculty/<br />Remove Faculty</>,
+//       link: "/faculty",
+//     },
+//     {
+//       icon: <BsCardHeading />,
+//       text: <>Add Student/<br />Remove Student</>,
+//       link: "/student",
+//     },
+//     {
+//       icon: <TbUserScan />,
+//       text: <>View Faculty<br />& Student</>,
+//       link: "/view",
+//     },
+//     {
+//       icon: <LiaFileUploadSolid />,
+//       text: <>Add Regulations</>,
+//       link: "/regulations",
+//     },
+//   ];
 
-  return (
-    <>
-      <div className="">
-        <div className="w-300 bg-white rounded-xl drop-shadow-2xl h-64">
-          <h1 className="h-10 w-50 text-center font-bold">Quick Actions:</h1>
-          <br />
-          <div className="flex w-300 justify-evenly h-40">
-            {obj.map((e, i) => {
-              let { icon, text, img, link } = e;
-              return (
-                <Link to={link} key={i}>
-                  <div className="bg-[#D8E7F5] w-50 rounded-[10px] cursor-pointer hover:scale-105 transition">
-                    {/* <img className="h-10 w-10" src={img} alt="" /> */}
-                    <div className="flex items-center justify-center h-18">
-                      <div className="bg-[#F3B300] rounded-[10px] flex items-center justify-center w-11 h-11">
-                        <h1 className="text-[white] text-[25px]">{icon}</h1>
-                      </div>
-                    </div>
-                    <h1 className=" h-[5rem]  flex items-center justify-center 
-    text-[15px] text-2xl font-bold 
-    bg-[radial-gradient(circle_at_center,_#3b82f6,_#1e3a8a)] 
-    bg-clip-text text-transparent">
-  {text}
-</h1>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+//   return (
+//     <section className="">
+//       <div className="text-left">
+//         <h2 className="text-xl font-bold mb-4">Quic Actions:</h2>
 
-export default Quickaction;
+//         {/* ✅ Responsive Grid (1 → 2 → 4) */}
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+//           {obj.map((val, ind) => (
+//             <Link
+//               to={val.link}
+//               key={ind}
+//               className="bg-blue-100 rounded-xl p-6 flex flex-col items-center text-blue-800 font-semibold w-full shadow-md hover:shadow-lg transition"
+//             >
+//               <div className="bg-yellow-400 p-3 rounded-md mb-3 text-2xl">
+//                 {val.icon}
+//               </div>
+//               <div className="text-center">{val.text}</div>
+//             </Link>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Quickaction;

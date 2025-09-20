@@ -1,7 +1,5 @@
 import React from 'react';
-// We will build a custom modal instead of using a library.
-// Icons are imported from lucide-react for a clean look.
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, X } from 'lucide-react';
 
 /**
  * A functional React component for a document upload modal.
@@ -21,22 +19,26 @@ const UploadModal3 = ({
   uploadOption,
   setUploadOption,
 }) => {
-  // If the modal is not set to be open, we render nothing.
-  if (!isOpen) {
-    return null;
-  }
+  if (!isOpen) return null;
 
   return (
-    // Modal Overlay: Covers the screen and closes the modal on click.
     <div
       className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-start z-50 px-4 pt-32"
       onClick={onClose}
     >
-      {/* Modal Content: The main dialog box. Clicks inside here are stopped from closing the modal. */}
       <div
         className="relative bg-white rounded-2xl shadow-2xl p-8 sm:p-12 w-full max-w-xl mx-auto outline-none"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* --- CLOSE BUTTON --- */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors"
+          aria-label="Close modal"
+        >
+          <X size={24} />
+        </button>
+
         {/* --- MODAL HEADER --- */}
         <div className="mb-10">
           <h2 className="text-2xl font-bold text-gray-800">
@@ -46,7 +48,6 @@ const UploadModal3 = ({
 
         {/* --- FORM CONTENT --- */}
         <div className="grid grid-cols-12 gap-x-4 gap-y-8 items-center">
-          {/* --- UPLOAD OPTION SELECTION --- */}
           <label className="col-span-12 sm:col-span-4 text-md font-medium text-gray-700 sm:text-right">
             Upload Document :
           </label>

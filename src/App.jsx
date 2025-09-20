@@ -1,6 +1,7 @@
 
 
 import { Outlet } from "react-router-dom";
+import TeacherProfile from "./modules/faculty/TeacherProfile";
 // import SignUp from "./components/Students/StudentSignUP";
 // import StudentSignUP from "./components/Students/StudentSignUP";
 // import Latest from "./components/Students/Latest";
@@ -19,7 +20,7 @@ import { Outlet } from "react-router-dom";
 function App() {
   return (
     <>
-     
+     <TeacherProfile></TeacherProfile>
       <Outlet />  
       {/* <StudentSignUP></StudentSignUP> */}
        {/* Ritesh task on 5-sept */}

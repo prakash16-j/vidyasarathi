@@ -1,6 +1,7 @@
+import Quickaction from "../../../../vidyasarathi/src/components/Admin/Quick actions"
 import AddRegulation_V from "./AddRegulation_V"
 import Admin_Navbar from "./Admin_Navbar"
-import Quickaction from "./Quick actions"
+// import Quickaction from "./Quick actions"
 
 let Addregulation=()=>{
   
