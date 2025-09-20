@@ -13,7 +13,7 @@ let Addregulation=()=>{
     <div className="h-[20rem] flex  justify-center ">
     <Quickaction></Quickaction>
     </div>
-    <div>
+    <div className="border-2 ">
      <AddRegulation_V></AddRegulation_V>
     </div>
 
