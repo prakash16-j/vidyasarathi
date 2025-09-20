@@ -6,89 +6,6 @@
   box-sizing: border-box;
 }
 
-/* -------- Section Styles -------- */
-.section {
-
-  background-image: url(../src/assets/curveBg.jpg);
-  background-size: 100vw 30rem;
-  background-repeat: no-repeat;
-}
-
-/* -------- Navbar -------- */
-.navbar {
-  padding-left: 50px;
-  display: flex;
-  height: 4rem;
-  justify-content: space-around;
-  align-items: center;
-  gap: 50px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-}
-
-.nav-links > li > a {
-  text-decoration: none;
-  color: black;
-}
-
-.nav-buttons {
-  display: flex;
-  gap: 30px;
-}
-
-.nav-buttons > button {
-  background-color: rgb(219, 169, 45);
-  color: white;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-}
-
-/* -------- Hero Section -------- */
-.hero {
-  background-image: url(../src/assets/clg.png);
-  height: 400px;
-  background-size: 100vw 400px;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  margin: 0 115px;
-}
-
-.hero-overlay {
-  width: 50rem;
-  font-size: 2rem;
-  color: white;
-  text-align: center;
-}
-
-.highlight {
-  background-color: rgb(228, 182, 41);
-}
-
-/* -------- Info Section -------- */
-.info-section {
-  width: 58vw;
-  font-size: 1.2rem;
-  padding: 20px;
-  margin: auto;
-}
-
-.get-start {
-  margin: 20px auto 0 auto;
-  display: block;
-  padding: 8px;
-  background-color: rgb(219, 169, 45);
-  color: white;
-  border: none;
-  cursor: pointer;
-}
 
 /* -------- Container -------- */
 .container1 {
@@ -116,27 +33,6 @@
 
 }
 
-.login-section{
-  background-image: url(./assets/academic&adminzone.png);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-   color: white;
-}
-.left-content {
-  max-width: 35%;
-  margin-left: 100px;
-}
-
-.left-content h1 {
-  font-size: 50px;
-  margin: 0;
-}
-
-.left-content h2 {
-  font-size: 24px;
-  margin: 10px 0;
-}
 
 
     .login-box {
@@ -149,22 +45,14 @@
       top: 22vh;
       left: 100vh;
       width: 300px;
-      color: black;
-      
+      color: black; 
     }
 .left-content p {
   font-size: 16px;
   line-height: 1.5;
 }
 
-.landing-login{
-  background: linear-gradient(to top, rgba(137, 129, 129, 0.5), rgba(239, 233, 233, 0.644));
-  padding: 20px;
-  border-radius: 10px;
-   width: 350px;
-}
-
-/* -------- Admin Login -------- */
+/* -------- Teacher Login -------- */
 .admin-login {
   background-image: url('../public/Books.png');
   width: 80%;
@@ -180,7 +68,7 @@
 .login-box {
   background: linear-gradient(to top, rgba(137, 129, 129, 0.5), rgba(239, 233, 233, 0.644));
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   position: absolute;
   top: 22vh;
   left: 100vh;

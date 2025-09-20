@@ -21,25 +21,25 @@ import FacultyRemovepopup from "../modules/Students/FacultyAddedpopup-4";
 
 // import all pages
 //
-import Landing from "../modules/Admin/Landing";
-import Login from "../modules/Admin/Login";
-import Admin_ViewPage from "../modules/Admin/Admin_ViewPage";
-import Admin_teacherSection from "../modules/Admin/Admin_teacherSection";
-import Admin_StudentSection from "../modules/Admin/Admin_StudentSection";
-import StudentProfile from "../modules/faculty/TeacherProfile";
-import StudentTable from "../modules/Admin/StudentTable";
-import StudentTable2 from "../modules/Admin/StudentTable2";
-import Add_faculty from "../modules/Admin/Add_faculty";
-import Addstudents from "../modules/Admin/Addstudents";
-import Addregulation from "../modules/Admin/Addregulation";
-import StudentProfile_adminview from "../modules/Admin/StudentProfile_adminview";
-import TeacherLogin from "../modules/faculty/TeacherLogin";
-import TeacherProfile from "../modules/faculty/TeacherProfile";
-import UpdateFacultyProfile from "../modules/faculty/UpdateFacultyProfile";
-import LogOutpopup from "../modules/Students/LogOutpopup";
-import FacultyAddedpopup from "../modules/Students/FacultyAddedpopup-3";
-import FacultyRemovepopup from "../modules/Students/FacultyAddedpopup-4";
-import StudentSignUP from "../modules/Students/StudentSignUP";
+// import Landing from "../modules/Admin/Landing";
+// import Login from "../modules/Admin/Login";
+// import Admin_ViewPage from "../modules/Admin/Admin_ViewPage";
+// import Admin_teacherSection from "../modules/Admin/Admin_teacherSection";
+// import Admin_StudentSection from "../modules/Admin/Admin_StudentSection";
+// import StudentProfile from "../modules/faculty/TeacherProfile";
+// import StudentTable from "../modules/Admin/StudentTable";
+// import StudentTable2 from "../modules/Admin/StudentTable2";
+// import Add_faculty from "../modules/Admin/Add_faculty";
+// import Addstudents from "../modules/Admin/Addstudents";
+// import Addregulation from "../modules/Admin/Addregulation";
+// import StudentProfile_adminview from "../modules/Admin/StudentProfile_adminview";
+// import TeacherLogin from "../modules/faculty/TeacherLogin";
+// import TeacherProfile from "../modules/faculty/TeacherProfile";
+// import UpdateFacultyProfile from "../modules/faculty/UpdateFacultyProfile";
+// import LogOutpopup from "../modules/Students/LogOutpopup";
+// import FacultyAddedpopup from "../modules/Students/FacultyAddedpopup-3";
+// import FacultyRemovepopup from "../modules/Students/FacultyAddedpopup-4";
+// import StudentSignUP from "../modules/Students/StudentSignUP";
 
 const routes = createBrowserRouter([
   {
