@@ -3,6 +3,7 @@ import Admin_Navbar from "./Admin_Navbar"
 import Quickaction from "./Quick actions"
 
 let Addregulation=()=>{
+  
 
     return <>
 
